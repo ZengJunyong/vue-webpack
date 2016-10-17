@@ -13,7 +13,15 @@ new Vue({
     router: new VueRouter({
         routes: [
             {path: '/foo', component: require('components/Foo')},
-            {path: '/bar', component: Bar}
+            {
+                path: '/bar', component: Bar,
+                children: [
+                    {
+                        path: 'zar',
+                        component: require('components/Zar')
+                    }
+                ]
+            }
         ]
     })
 })
