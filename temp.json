@@ -1,14 +1,12 @@
 {
   "entry": {
-    "app": [
-      "./build/dev-client",
-      "./src/main.js"
-    ]
+    "app": "./src/main.js"
   },
   "output": {
     "path": "/Users/yong/learn/vue.js/vue-cli/webpack/dist",
     "publicPath": "/",
-    "filename": "[name].js"
+    "filename": "static/js/[name].[chunkhash].js",
+    "chunkFilename": "static/js/[id].[chunkhash].js"
   },
   "resolve": {
     "extensions": [
@@ -34,31 +32,31 @@
     "loaders": [
       {
         "test": {},
-        "loader": "vue-style-loader!css-loader"
+        "loader": "/Users/yong/learn/vue.js/vue-cli/webpack/node_modules/extract-text-webpack-plugin/loader.js?{\"omit\":1,\"extract\":true,\"remove\":true}!vue-style-loader!css-loader?sourceMap"
       },
       {
         "test": {},
-        "loader": "vue-style-loader!css-loader"
+        "loader": "/Users/yong/learn/vue.js/vue-cli/webpack/node_modules/extract-text-webpack-plugin/loader.js?{\"omit\":1,\"extract\":true,\"remove\":true}!vue-style-loader!css-loader?sourceMap"
       },
       {
         "test": {},
-        "loader": "vue-style-loader!css-loader!less-loader"
+        "loader": "/Users/yong/learn/vue.js/vue-cli/webpack/node_modules/extract-text-webpack-plugin/loader.js?{\"omit\":1,\"extract\":true,\"remove\":true}!vue-style-loader!css-loader?sourceMap!less-loader?sourceMap"
       },
       {
         "test": {},
-        "loader": "vue-style-loader!css-loader!sass-loader?indentedSyntax"
+        "loader": "/Users/yong/learn/vue.js/vue-cli/webpack/node_modules/extract-text-webpack-plugin/loader.js?{\"omit\":1,\"extract\":true,\"remove\":true}!vue-style-loader!css-loader?sourceMap!sass-loader?indentedSyntax&sourceMap"
       },
       {
         "test": {},
-        "loader": "vue-style-loader!css-loader!sass-loader"
+        "loader": "/Users/yong/learn/vue.js/vue-cli/webpack/node_modules/extract-text-webpack-plugin/loader.js?{\"omit\":1,\"extract\":true,\"remove\":true}!vue-style-loader!css-loader?sourceMap!sass-loader?sourceMap"
       },
       {
         "test": {},
-        "loader": "vue-style-loader!css-loader!stylus-loader"
+        "loader": "/Users/yong/learn/vue.js/vue-cli/webpack/node_modules/extract-text-webpack-plugin/loader.js?{\"omit\":1,\"extract\":true,\"remove\":true}!vue-style-loader!css-loader?sourceMap!stylus-loader?sourceMap"
       },
       {
         "test": {},
-        "loader": "vue-style-loader!css-loader!stylus-loader"
+        "loader": "/Users/yong/learn/vue.js/vue-cli/webpack/node_modules/extract-text-webpack-plugin/loader.js?{\"omit\":1,\"extract\":true,\"remove\":true}!vue-style-loader!css-loader?sourceMap!stylus-loader?sourceMap"
       },
       {
         "test": {},
@@ -94,46 +92,72 @@
   },
   "vue": {
     "loaders": {
-      "css": "vue-style-loader!css-loader",
-      "postcss": "vue-style-loader!css-loader",
-      "less": "vue-style-loader!css-loader!less-loader",
-      "sass": "vue-style-loader!css-loader!sass-loader?indentedSyntax",
-      "scss": "vue-style-loader!css-loader!sass-loader",
-      "stylus": "vue-style-loader!css-loader!stylus-loader",
-      "styl": "vue-style-loader!css-loader!stylus-loader"
+      "css": "/Users/yong/learn/vue.js/vue-cli/webpack/node_modules/extract-text-webpack-plugin/loader.js?{\"omit\":1,\"extract\":true,\"remove\":true}!vue-style-loader!css-loader?sourceMap",
+      "postcss": "/Users/yong/learn/vue.js/vue-cli/webpack/node_modules/extract-text-webpack-plugin/loader.js?{\"omit\":1,\"extract\":true,\"remove\":true}!vue-style-loader!css-loader?sourceMap",
+      "less": "/Users/yong/learn/vue.js/vue-cli/webpack/node_modules/extract-text-webpack-plugin/loader.js?{\"omit\":1,\"extract\":true,\"remove\":true}!vue-style-loader!css-loader?sourceMap!less-loader?sourceMap",
+      "sass": "/Users/yong/learn/vue.js/vue-cli/webpack/node_modules/extract-text-webpack-plugin/loader.js?{\"omit\":1,\"extract\":true,\"remove\":true}!vue-style-loader!css-loader?sourceMap!sass-loader?indentedSyntax&sourceMap",
+      "scss": "/Users/yong/learn/vue.js/vue-cli/webpack/node_modules/extract-text-webpack-plugin/loader.js?{\"omit\":1,\"extract\":true,\"remove\":true}!vue-style-loader!css-loader?sourceMap!sass-loader?sourceMap",
+      "stylus": "/Users/yong/learn/vue.js/vue-cli/webpack/node_modules/extract-text-webpack-plugin/loader.js?{\"omit\":1,\"extract\":true,\"remove\":true}!vue-style-loader!css-loader?sourceMap!stylus-loader?sourceMap",
+      "styl": "/Users/yong/learn/vue.js/vue-cli/webpack/node_modules/extract-text-webpack-plugin/loader.js?{\"omit\":1,\"extract\":true,\"remove\":true}!vue-style-loader!css-loader?sourceMap!stylus-loader?sourceMap"
     },
     "postcss": [
       null
     ]
   },
-  "devtool": "#eval-source-map",
+  "devtool": "#source-map",
   "plugins": [
     {
       "definitions": {
         "process.env": {
-          "NODE_ENV": "\"development\""
+          "NODE_ENV": "\"production\""
+        }
+      }
+    },
+    {
+      "options": {
+        "compress": {
+          "warnings": false
         }
       }
     },
     {},
-    {},
-    {},
+    {
+      "filename": "static/css/[name].[contenthash].css",
+      "options": {},
+      "id": 1
+    },
     {
       "options": {
         "template": "index.html",
-        "filename": "index.html",
+        "filename": "/Users/yong/learn/vue.js/vue-cli/webpack/dist/index.html",
         "hash": false,
         "inject": true,
         "compile": true,
         "favicon": false,
-        "minify": false,
+        "minify": {
+          "removeComments": true,
+          "collapseWhitespace": true,
+          "removeAttributeQuotes": true
+        },
         "cache": true,
         "showErrors": true,
         "chunks": "all",
         "excludeChunks": [],
         "title": "Webpack App",
-        "xhtml": false
+        "xhtml": false,
+        "chunksSortMode": "dependency"
       }
+    },
+    {
+      "chunkNames": "vendor",
+      "ident": "/Users/yong/learn/vue.js/vue-cli/webpack/node_modules/webpack/lib/optimize/CommonsChunkPlugin.js0"
+    },
+    {
+      "chunkNames": "manifest",
+      "selectedChunks": [
+        "vendor"
+      ],
+      "ident": "/Users/yong/learn/vue.js/vue-cli/webpack/node_modules/webpack/lib/optimize/CommonsChunkPlugin.js1"
     }
   ]
 }
