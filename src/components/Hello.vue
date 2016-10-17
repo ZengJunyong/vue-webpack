@@ -8,7 +8,7 @@
 export default {
   data () {
     return {
-      msg: 'Hello Vue 2! 屌'
+      msg: 'Hello Vue 2!'
     }
   },
   methods:{
