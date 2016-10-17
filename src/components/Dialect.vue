@@ -1,6 +1,6 @@
 <template>
     <div class="dialect">
-        <h1 @click="debug">{{msg}}</h1>
+        <h1 @click="debug">{{msg}}2</h1>
     </div>
 </template>
 
@@ -15,8 +15,9 @@
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="sass" scoped>
+<style lang="scss" scoped>
+    $color: gray;
     .dialect {
-        color: red;
+        color: $color;
     }
 </style>
