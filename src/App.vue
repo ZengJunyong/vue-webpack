@@ -5,7 +5,9 @@
     <dialect></dialect>
     <router-link to="/foo">Go to Foo</router-link>
     <router-link to="/bar">Go to Bar</router-link>
+    <router-link to="/bar/zar">Go to Zar</router-link>
     <router-view></router-view>
+    <resouce></resouce>
     <p>
       Welcome to your Vue.js app!
     </p>
@@ -29,10 +31,11 @@
 <script>
 import Hello from './components/Hello'
 import Dialect from './components/Dialect'
+import Resouce from './components/Resouce'
 
 export default {
   components: {
-    Hello,Dialect
+    Hello,Dialect,Resouce
   }
 }
 </script>

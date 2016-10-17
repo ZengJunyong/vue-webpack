@@ -6,6 +6,7 @@ import App from './App'
 import Bar from 'components/Bar'
 
 Vue.use(VueRouter)
+Vue.use(require('vue-resource'))
 
 new Vue({
     el: '#app',
