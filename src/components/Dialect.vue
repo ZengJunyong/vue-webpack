@@ -4,10 +4,10 @@
     </div>
 </template>
 
-<script lang="coffee">
+<script lang="coffee" type="text/coffeescript">
     module.exports =
         data: ->
-            msg : 'I like writing CoffeeScript and SASS in vue file!'
+            msg: 'I like writing CoffeeScript and SASS in vue file!'
         methods:
             debug: ->
                 debugger
@@ -15,7 +15,7 @@
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss" scoped>
+<style lang="scss" scoped rel="stylesheet/scss">
     $color: gray;
     .dialect {
         color: $color;
