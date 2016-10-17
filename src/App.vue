@@ -3,6 +3,9 @@
     <img class="logo" src="./assets/logo.png">
     <hello></hello>
     <dialect></dialect>
+    <router-link to="/foo">Go to Foo</router-link>
+    <router-link to="/bar">Go to Bar</router-link>
+    <router-view></router-view>
     <p>
       Welcome to your Vue.js app!
     </p>
