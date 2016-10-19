@@ -12,12 +12,10 @@ new Vue({
   render: h => h(App),
   router: new VueRouter({
     routes: [
-      { path: '/', redirect: '/full' },
+      {path: '/', redirect: '/full'},
       {path: '/rm', component: require('components/RM')},
-      {
-        name: 'full',
-        path: '/full', component: require('components/PriceTable')
-      }
+      {name: 'full', path: '/full', component: require('components/PriceTable')},
+      {name: '10off', path: '/10off', component: require('components/PriceTable')}
     ]
   })
 })

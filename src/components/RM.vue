@@ -68,6 +68,7 @@
 
 <script lang="coffee" type="text/coffeescript">
   module.exports =
+    name: 'RM'
     data: ->
       options:
         custom: 'no'
