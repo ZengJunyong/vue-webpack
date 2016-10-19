@@ -12,6 +12,7 @@ new Vue({
   render: h => h(App),
   router: new VueRouter({
     routes: [
+      { path: '/', redirect: '/full' },
       {path: '/rm', component: require('components/RM')},
       {
         name: 'full',

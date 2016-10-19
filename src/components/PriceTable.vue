@@ -55,7 +55,7 @@
     data () {
       return {
         stripe: null,
-        months: 9
+        months: null
       }
     },
     methods: {
@@ -70,6 +70,7 @@
           function (res) {
             next(vm => {
               vm.stripe = JSON.parse(res.body)[to.name]
+              vm.months = vm.$route.query.months * 1
             })
           }
         )
