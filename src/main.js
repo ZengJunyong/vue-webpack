@@ -12,7 +12,11 @@ new Vue({
   render: h => h(App),
   router: new VueRouter({
     routes: [
-      {path: '/rm', component: require('components/RM')}
+      {path: '/rm', component: require('components/RM')},
+      {
+        name: 'full',
+        path: '/full', component: require('components/PriceTable')
+      }
     ]
   })
 })
