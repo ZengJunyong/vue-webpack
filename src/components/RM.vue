@@ -50,16 +50,15 @@
 
       <p>
         Your payment URL to clients is
-        <a v-if="options.custom=='no'" target="_blank"
-           :href="link">{{link}}
+        <a v-if="options.custom=='no'" :href="link">{{link}}
         </a>
-        <a v-if="options.custom=='link1'" target="_blank" :href="path+'#custom'">
+        <a v-if="options.custom=='link1'" :href="path+'#custom'">
           {{path}}#custom
         </a>
-        <a v-if="options.custom=='link2'" target="_blank" :href="path+'#custom2'">
+        <a v-if="options.custom=='link2'" :href="path+'#custom2'">
           {{path}}#custom2
         </a>
-        <a v-if="options.custom=='link3'" target="_blank" :href="path+'#custom3'">
+        <a v-if="options.custom=='link3'" :href="path+'#custom3'">
           {{path}}#custom3
         </a>
       </p>

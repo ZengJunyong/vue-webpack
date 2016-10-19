@@ -52,6 +52,7 @@
   import Vue from 'vue'
 
   export default {
+    name: 'PriceTable',
     data () {
       return {
         stripe: null,
