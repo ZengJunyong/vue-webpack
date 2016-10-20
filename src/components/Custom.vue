@@ -12,7 +12,7 @@
 <script>
   // http://router.vuejs.org/zh-cn/advanced/data-fetching.html
   // 在导航完成前获取数据
-  import Vue from 'vue'
+  import {getStripeConfig} from '../services'
 
   export default {
     name: 'Custom',
@@ -28,7 +28,7 @@
     },
     beforeRouteEnter: (to, from, next) => {
       // https://github.com/vuejs/vue-router/issues/648
-      Vue.http.get('http://letsgaigai.com/stripeConfig')
+      getStripeConfig
         .then(
           function (res) {
             next(

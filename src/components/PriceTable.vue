@@ -47,7 +47,9 @@
 </template>
 
 <script>
-  import {beforeRouteEnter} from '../stripe'
+  // http://router.vuejs.org/zh-cn/advanced/data-fetching.html
+  // 在导航完成前获取数据
+  import {getStripeConfig} from '../services'
 
   export default {
     name: 'PriceTable',
@@ -62,7 +64,17 @@
         console.log('choose')
       }
     },
-    beforeRouteEnter
+    beforeRouteEnter: (to, from, next) => {
+      getStripeConfig
+        .then(
+          function (res) {
+            next(vm => {
+              vm.stripe = JSON.parse(res.body)[to.name]
+              vm.months = vm.$route.query.months * 1
+            })
+          }
+        )
+    }
   }
 </script>
 
