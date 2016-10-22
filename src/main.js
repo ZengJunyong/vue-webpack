@@ -18,7 +18,8 @@ new Vue({
       {name: '10off', path: '/10off', component: require('components/PriceTable')},
       {name: 'custom', path: '/custom', component: require('components/Custom')},
       {name: 'custom2', path: '/custom2', component: require('components/Custom')},
-      {name: 'custom3', path: '/custom3', component: require('components/Custom')}
+      {name: 'custom3', path: '/custom3', component: require('components/Custom')},
+      {name: 'pay', path: '/pay', component: require('components/Pay')}
     ]
   })
 })

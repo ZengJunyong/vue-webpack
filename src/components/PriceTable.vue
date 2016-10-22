@@ -60,8 +60,9 @@
       }
     },
     methods: {
-      choosePayment(){
-        console.log('choose')
+      choosePayment(plan){
+        // http://stackoverflow.com/questions/31344041/how-to-unbind-an-array-copy-in-vue-js
+        this.$router.push({name: 'pay', query: JSON.parse(JSON.stringify(plan))})
       }
     },
     beforeRouteEnter: (to, from, next) => {
