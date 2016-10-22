@@ -34,6 +34,7 @@
 
 <script>
 
+  import Vue from 'vue'
   import {pay} from '../services'
 
   export default {
@@ -48,27 +49,24 @@
     },
     methods: {
       onSubmit: function () {
-        debugger
         var _this = this;
         let key = 'pk_test_FX2nzQcClgXqETUTMZDK2BNu';
-//        let key = 'pk_live_Zo2921HDEtTxDEZfXS3ZVR5N';
-        let {id, itemName, amount, count} = this.plan;
-        let {firstName, lastName} = this.user;
+        // let key = 'pk_live_Zo2921HDEtTxDEZfXS3ZVR5N';
+        // http://stackoverflow.com/questions/30578254/does-vue-js-have-a-built-in-way-to-add-a-copy-of-a-persistent-object-to-a-repeat
+        var mixin = Vue.util.extend(this.plan, this.user)
         StripeCheckout.configure({
           key: key,
           name: 'GaiGai Pte Ltd',
-          description: itemName,
+          description: this.plan.itemName,
           image: 'https://www.letsgaigai.com/gokaikai/assets/images/big.logo.png',
           allowRememberMe: false,
-          panelLabel: count ? 'Subscribe' : 'Pay S$' + amount,
+          panelLabel: this.plan.count ? 'Subscribe' : 'Pay S$' + this.plan.amount,
           token: function (token) {
-            // TODO why can't use _this.plan here?
-            pay({
-              id,
+            debugger
+            pay(Vue.util.extend(mixin, {
               tokenId: token.id,
               email: token.email,
-              amount, itemName, count, firstName, lastName
-            }).then((res) => {
+            })).then((res) => {
               debugger
               let {success} = res.body;
               if (success) {
