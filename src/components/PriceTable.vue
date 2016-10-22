@@ -83,4 +83,11 @@
   .table {
     margin-top: 20px;
   }
+
+  th, td {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+  }
 </style>
