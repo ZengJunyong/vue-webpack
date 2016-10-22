@@ -47,6 +47,16 @@
         success: -1
       }
     },
+    computed: {
+      plan(){
+        return this.$route.query
+      },
+      inValid(){
+        // TODO should use vue-validator, now it is not published.
+        // anyway, this is not a perfect idea now, but it works with some bugs :-)
+        return this.user.firstName == null || this.user.lastName == null
+      }
+    },
     methods: {
       onSubmit: function () {
         var _this = this;
@@ -62,12 +72,10 @@
           allowRememberMe: false,
           panelLabel: this.plan.count ? 'Subscribe' : 'Pay S$' + this.plan.amount,
           token: function (token) {
-            debugger
             pay(Vue.util.extend(mixin, {
               tokenId: token.id,
               email: token.email,
             })).then((res) => {
-              debugger
               let {success} = res.body;
               if (success) {
                 _this.user = {};
@@ -76,16 +84,6 @@
             });
           }
         }).open();
-      }
-    },
-    computed: {
-      plan(){
-        return this.$route.query
-      },
-      inValid(){
-        // TODO should use vue-validator, now it is not published.
-        // anyway, this is not a perfect idea now, but it works with some bugs :-)
-        return this.user.firstName == null || this.user.lastName == null
       }
     }
   }

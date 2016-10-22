@@ -50,6 +50,7 @@
   // http://router.vuejs.org/zh-cn/advanced/data-fetching.html
   // 在导航完成前获取数据
   import {getStripeConfig} from '../services'
+  import {getObj} from '../util'
 
   export default {
     name: 'PriceTable',
@@ -61,8 +62,7 @@
     },
     methods: {
       choosePayment(plan){
-        // http://stackoverflow.com/questions/31344041/how-to-unbind-an-array-copy-in-vue-js
-        this.$router.push({name: 'pay', query: JSON.parse(JSON.stringify(plan))})
+        this.$router.push({name: 'pay', query: getObj(plan)})
       }
     },
     beforeRouteEnter: (to, from, next) => {

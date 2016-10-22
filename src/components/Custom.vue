@@ -13,6 +13,7 @@
   // http://router.vuejs.org/zh-cn/advanced/data-fetching.html
   // 在导航完成前获取数据
   import {getStripeConfig} from '../services'
+  import {getObj} from '../util'
 
   export default {
     name: 'Custom',
@@ -23,7 +24,7 @@
     },
     methods: {
       choosePayment(){
-        console.log('choose')
+        this.$router.push({name: 'pay', query: getObj(this.plan)})
       }
     },
     beforeRouteEnter: (to, from, next) => {
