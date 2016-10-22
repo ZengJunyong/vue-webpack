@@ -36,6 +36,7 @@
 
   import Vue from 'vue'
   import {pay} from '../services'
+  import {key} from '../config'
 
   export default {
     name: 'Pay',
@@ -60,12 +61,10 @@
     methods: {
       onSubmit: function () {
         var _this = this;
-        let key = 'pk_test_FX2nzQcClgXqETUTMZDK2BNu';
-        // let key = 'pk_live_Zo2921HDEtTxDEZfXS3ZVR5N';
         // http://stackoverflow.com/questions/30578254/does-vue-js-have-a-built-in-way-to-add-a-copy-of-a-persistent-object-to-a-repeat
         var mixin = Vue.util.extend(this.plan, this.user)
         StripeCheckout.configure({
-          key: key,
+          key,
           name: 'GaiGai Pte Ltd',
           description: this.plan.itemName,
           image: 'https://www.letsgaigai.com/gokaikai/assets/images/big.logo.png',

@@ -1,11 +1,8 @@
 import Vue from 'vue'
-
-// path = 'https://letsgaigai.com/'
-let path = 'http://localhost:4000/'
+import {domain} from './config'
 
 module.exports = {
   // https://github.com/vuejs/vue-router/issues/648
-  getStripeConfig: Vue.http.get('http://letsgaigai.com/stripeConfig'),
-
-  pay: payment => Vue.http.post(path + 'stripe', payment)
+  getStripeConfig: Vue.http.get(domain + 'stripeConfig'),
+  pay: payment => Vue.http.post(domain + 'stripe', payment)
 }
