@@ -8,6 +8,7 @@ import App from './App'
 
 Vue.use(VueRouter)
 Vue.use(require('vue-resource'))
+Vue.use(require('vue-verify'))
 
 new Vue({
   el: '#app',

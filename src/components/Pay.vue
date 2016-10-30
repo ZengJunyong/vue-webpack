@@ -17,9 +17,9 @@
           <input required v-model="user.lastName" name="lastName" type="text" class="form-control">
         </div>
 
-        <button v-if="plan.count" :disabled="inValid" type="submit" class="btn btn-primary">Subscribe
+        <button v-if="plan.count" :disabled="!verify.$valid" type="submit" class="btn btn-primary">Subscribe
         </button>
-        <button v-if="!plan.count" :disabled="inValid" type="submit" class="btn btn-primary">Pay
+        <button v-if="!plan.count" :disabled="!verify.$valid" type="submit" class="btn btn-primary">Pay
           S${{plan.amount}}
         </button>
 
@@ -48,14 +48,19 @@
         success: -1
       }
     },
+    created: function () {
+      this.$verify({
+        'user.firstName': {
+          required: true,
+        },
+        'user.lastName': {
+          required: true,
+        }
+      })
+    },
     computed: {
       plan(){
         return this.$route.query
-      },
-      inValid(){
-        // TODO should use vue-validator, now it is not published.
-        // anyway, this is not a perfect idea now, but it works with some bugs :-)
-        return this.user.firstName == null || this.user.lastName == null
       }
     },
     methods: {
