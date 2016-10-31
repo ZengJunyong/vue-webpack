@@ -42,6 +42,15 @@
         <button @click="choosePayment(plan)" type="button" class="btn btn-primary">Subscribe</button>
       </td>
     </tr>
+    <tr v-if="months>=12">
+      <td>12 months installment</td>
+      <td></td>
+      <td v-for="plan of stripe.plans['12 months']">
+        S${{plan.amount}}
+        <br>
+        <button @click="choosePayment(plan)" type="button" class="btn btn-primary">Subscribe</button>
+      </td>
+    </tr>
   </table>
 
 </template>

@@ -36,6 +36,9 @@
           <label class="radio-inline">
             <input type="radio" v-model="options.months" value="9"> 9 months
           </label>
+          <label class="radio-inline">
+            <input type="radio" v-model="options.months" value="12"> 12 months
+          </label>
         </div>
         <div class="form-group" v-if="options.custom=='no'">
           <h4>3. Did you use $300 discount?</h4>
