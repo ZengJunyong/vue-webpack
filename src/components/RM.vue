@@ -1,10 +1,5 @@
 <template>
   <div class="panel panel-primary">
-    <div class="panel-heading text-center">
-      <h3 class="panel-title">
-        Page for RM
-      </h3>
-    </div>
     <div class="panel-body">
       <form>
         <div class="form-group">
