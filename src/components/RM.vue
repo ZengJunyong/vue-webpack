@@ -26,7 +26,7 @@
           </label>
         </div>
         <div class="form-group">
-          <h4>3. Did you use $300 discount?</h4>
+          <h4>3. Did you use $100 discount?</h4>
           <label class="radio-inline">
             <input type="radio" v-model="options.discount" value="y"> Yes
           </label>
