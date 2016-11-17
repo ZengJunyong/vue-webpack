@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1 class="text-center">GaiGai</h1>
+    <h1 class="text-center">Fleek</h1>
     <div class="container">
       <ul class="nav nav-pills" v-if="$route.query.custom=='no'">
         <li :class="{active: $route.name == 'full'}" v-if="$route.query.discount!='y'">
