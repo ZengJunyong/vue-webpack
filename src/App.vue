@@ -1,5 +1,14 @@
 <template>
   <div id="app">
+    <nav class="navbar navbar-inverse">
+      <div class="container" style="height: 60px;font-size: 14px;">
+        <div class="navbar-header">
+          <a class="navbar-brand active" href="#/home">
+            <!--<img class="logo" src="gokaikai/assets/images/logo.png"/>-->
+          </a>
+        </div>
+      </div>
+    </nav>
     <h1 class="text-center">GaiGai</h1>
     <div class="container">
       <ul class="nav nav-pills" v-if="$route.query.custom=='no'">
