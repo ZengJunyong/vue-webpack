@@ -7,7 +7,8 @@
   "scripts": {
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
-    "deploy": "./deploy.sh"
+    "deploy-GG": "./deploy.sh",
+    "deploy-Fleek": "./deploy.fleek.sh"
   },
   "dependencies": {
     "vue": "^2.0.1",
