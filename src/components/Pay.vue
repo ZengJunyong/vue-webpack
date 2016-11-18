@@ -1,7 +1,6 @@
 <template>
     <div>
-
-        <Process></Process>
+        <Process :step="step"></Process>
         <div class="panel panel-primary">
             <div class="panel-heading text-center">
                 <h3 class="panel-title">
@@ -93,7 +92,8 @@
                 user: {
                     firstName: null, lastName: null
                 },
-                success: -1
+                success: -1,
+                step: 2
             }
         },
         created: function () {
@@ -130,12 +130,14 @@
                         })).then((res) => {
                             let {success} = res.body;
                             if (success) {
-                                _this.user = {};
+                                _this.user = {}
+                                _this.step = 4
                             }
-                            _this.success = success;
+                            _this.success = success
                         });
                     }
                 }).open();
+                _this.step = 3
             }
         }
     }
