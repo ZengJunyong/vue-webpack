@@ -1,6 +1,6 @@
 <template>
-  <div class="panel panel-primary">
-    <div class="panel-body">
+
+    <div style="margin: 30px 0 50px 0;">
       <form>
         <div class="form-group">
           <h4>1. Are you using custom links?</h4>
@@ -61,7 +61,7 @@
         </a>
       </p>
     </div>
-  </div>
+
 </template>
 
 <script lang="coffee" type="text/coffeescript">

@@ -1,0 +1,16 @@
+@font-face {
+    font-family: Brandon_blk;
+    src: url(fonts/Brandon_blk.otf);
+}
+@font-face {
+    font-family: Brandon_reg;
+    src: url(fonts/Brandon_reg.otf);
+}
+@font-face {
+    font-family: Brandon_bld;
+    src: url(fonts/Brandon_bld.otf);
+}
+
+body {
+    font-family: Brandon_reg,Raleway,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
