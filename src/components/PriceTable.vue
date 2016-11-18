@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Process></Process>
+        <Process step="1"></Process>
         <table class="table table-bordered" v-if="stripe">
             <thead>
             <tr>

@@ -4,19 +4,19 @@
         <div class="bar">
             <div class="wrap">
                 <div class="number">
-                    <span class="active">1</span>
-                    SELECT PACKAGE
+                    <span :class="{active: step >= 1}">1</span>
+                    SELECT PACKAGE {{ step }}
                 </div>
                 <div class="number">
-                    <span class="active">2</span>
+                    <span :class="{active: step >= 2}">2</span>
                     MEMBER DETAILS
                 </div>
                 <div class="number">
-                    <span>3</span>
+                    <span :class="{active: step >= 3}">3</span>
                     PAYMENT DETAILS
                 </div>
                 <div class="number">
-                    <span>4</span>
+                    <span :class="{active: step >= 4}">4</span>
                     PAYMENT COMPLETE
                 </div>
             </div>
@@ -26,7 +26,8 @@
 
 <script>
     export default {
-        name: 'Process'
+        name: 'Process',
+        props: ['step']
     }
 </script>
 
