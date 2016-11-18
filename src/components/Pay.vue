@@ -1,7 +1,7 @@
 <template>
     <div>
 
-        <Process step="1"></Process>
+        <Process></Process>
         <div class="panel panel-primary">
             <div class="panel-heading text-center">
                 <h3 class="panel-title">
