@@ -5,7 +5,7 @@
             <div class="wrap">
                 <div class="number">
                     <span :class="{active: step >= 1}">1</span>
-                    SELECT PACKAGE {{ step }}
+                    SELECT PACKAGE
                 </div>
                 <div class="number">
                     <span :class="{active: step >= 2}">2</span>
