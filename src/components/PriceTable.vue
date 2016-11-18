@@ -1,58 +1,60 @@
 <template>
-  <table class="table" v-if="stripe">
-    <tr>
-      <th></th>
-      <th>1 date package</th>
-      <th>3 date package</th>
-      <th>5 date package</th>
-      <th>10 date package</th>
-    </tr>
-    <tr>
-      <td>No installment</td>
-      <td v-for="payment of stripe.payments">
-        S${{payment.amount}}
-        <br>
-        <button @click="choosePayment(payment)" type="button" class="btn btn-primary">Pay with Card</button>
-      </td>
-    </tr>
-    <tr v-if="months>=3">
-      <td>3 months installment</td>
-      <td></td>
-      <td v-for="plan of stripe.plans['3 months']">
-        S${{plan.amount}}
-        <br>
-        <button @click="choosePayment(plan)" type="button" class="btn btn-primary">Subscribe</button>
-      </td>
-    </tr>
-    <tr v-if="months>=6">
-      <td>6 months installment</td>
-      <td></td>
-      <td v-for="plan of stripe.plans['6 months']">
-        S${{plan.amount}}
-        <br>
-        <button @click="choosePayment(plan)" type="button" class="btn btn-primary">Subscribe</button>
-      </td>
-    </tr>
-    <tr v-if="months>=9">
-      <td>9 months installment</td>
-      <td></td>
-      <td v-for="plan of stripe.plans['9 months']">
-        S${{plan.amount}}
-        <br>
-        <button @click="choosePayment(plan)" type="button" class="btn btn-primary">Subscribe</button>
-      </td>
-    </tr>
-    <tr v-if="months>=12">
-      <td>12 months installment</td>
-      <td></td>
-      <td v-for="plan of stripe.plans['12 months']">
-        S${{plan.amount}}
-        <br>
-        <button @click="choosePayment(plan)" type="button" class="btn btn-primary">Subscribe</button>
-      </td>
-    </tr>
-  </table>
-
+  <div>
+    <Process></Process>
+    <table class="table" v-if="stripe">
+      <tr>
+        <th></th>
+        <th>1 date package</th>
+        <th>3 date package</th>
+        <th>5 date package</th>
+        <th>10 date package</th>
+      </tr>
+      <tr>
+        <td>No installment</td>
+        <td v-for="payment of stripe.payments">
+          S${{payment.amount}}
+          <br>
+          <button @click="choosePayment(payment)" type="button" class="btn btn-primary">Pay with Card</button>
+        </td>
+      </tr>
+      <tr v-if="months>=3">
+        <td>3 months installment</td>
+        <td></td>
+        <td v-for="plan of stripe.plans['3 months']">
+          S${{plan.amount}}
+          <br>
+          <button @click="choosePayment(plan)" type="button" class="btn btn-primary">Subscribe</button>
+        </td>
+      </tr>
+      <tr v-if="months>=6">
+        <td>6 months installment</td>
+        <td></td>
+        <td v-for="plan of stripe.plans['6 months']">
+          S${{plan.amount}}
+          <br>
+          <button @click="choosePayment(plan)" type="button" class="btn btn-primary">Subscribe</button>
+        </td>
+      </tr>
+      <tr v-if="months>=9">
+        <td>9 months installment</td>
+        <td></td>
+        <td v-for="plan of stripe.plans['9 months']">
+          S${{plan.amount}}
+          <br>
+          <button @click="choosePayment(plan)" type="button" class="btn btn-primary">Subscribe</button>
+        </td>
+      </tr>
+      <tr v-if="months>=12">
+        <td>12 months installment</td>
+        <td></td>
+        <td v-for="plan of stripe.plans['12 months']">
+          S${{plan.amount}}
+          <br>
+          <button @click="choosePayment(plan)" type="button" class="btn btn-primary">Subscribe</button>
+        </td>
+      </tr>
+    </table>
+  </div>
 </template>
 
 <script>
@@ -60,9 +62,13 @@
   // 在导航完成前获取数据
   import {getStripeConfig} from '../services'
   import {getObj} from '../util'
+  import Process from './Process.vue'
 
   export default {
     name: 'PriceTable',
+    components: {
+      Process
+    },
     data () {
       return {
         stripe: null,
