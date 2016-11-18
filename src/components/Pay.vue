@@ -1,7 +1,7 @@
 <template>
     <div>
         <Process :step="step"></Process>
-        <div class="panel panel-primary">
+        <div class="panel panel-primary"  v-if="success!=1&&success!=0">
             <div class="panel-heading text-center">
                 <h3 class="panel-title">
                     {{plan.itemName}}
@@ -41,7 +41,7 @@
             </div>
         </div>
 
-        <div class="panel panel-primary">
+        <div class="panel panel-primary" v-if="success==1">
             <div class="panel-heading text-center">
                 <h3 class="panel-title">
                     Payment is complete!
@@ -56,7 +56,7 @@
             </div>
         </div>
 
-        <div class="panel panel-primary">
+        <div class="panel panel-primary" v-if="success==0">
             <div class="panel-heading text-center" style="background: #8e1414;">
                 <h3 class="panel-title">
                     Payment Unsuccessful
@@ -65,7 +65,7 @@
             <div class="panel-body" style="padding: 30px;">
                 OOPS, THERE SEEMS TO BE A PROBLEM.
                 <br>
-                <button class="btn btn-primary" style="margin-top: 20px;">
+                <button  @click="tryAgain" class="btn btn-primary" style="margin-top: 20px;">
                     TRY AGAIN
                 </button>
             </div>
@@ -138,6 +138,10 @@
                     }
                 }).open();
                 _this.step = 3
+            },
+            tryAgain:function () {
+                this.success = -1
+                this.onSubmit()
             }
         }
     }
