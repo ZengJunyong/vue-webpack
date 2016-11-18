@@ -1,7 +1,7 @@
 <template>
     <div>
 
-        <Process></Process>
+        <Process step="1"></Process>
         <div class="panel panel-primary">
             <div class="panel-heading text-center">
                 <h3 class="panel-title">
@@ -10,7 +10,8 @@
                 </h3>
             </div>
             <div class="panel-body">
-                <form class="form-horizontal" @submit.prevent="onSubmit()" style="width: 400px;margin: 40px auto 30px auto;">
+                <form class="form-horizontal" @submit.prevent="onSubmit()"
+                      style="width: 400px;margin: 40px auto 30px auto;">
                     <div class="form-group">
                         <label class="col-sm-4 control-label">First name</label>
                         <div class="col-sm-8">
@@ -26,9 +27,11 @@
                     </div>
                     <div class="form-group">
                         <div class="col-sm-offset-4 col-sm-8" style="margin-top: 10px;">
-                            <button v-if="plan.count" :disabled="!verify.$valid" type="submit" class="btn btn-block btn-primary">Subscribe
+                            <button v-if="plan.count" :disabled="!verify.$valid" type="submit"
+                                    class="btn btn-block btn-primary">Subscribe
                             </button>
-                            <button v-if="!plan.count" :disabled="!verify.$valid" type="submit" class="btn btn-block btn-primary">Pay
+                            <button v-if="!plan.count" :disabled="!verify.$valid" type="submit"
+                                    class="btn btn-block btn-primary">Pay
                                 S${{plan.amount}}
                             </button>
                         </div>
@@ -36,6 +39,36 @@
                     <span v-if="success==0" style="color: red;">Opps, something is wrong!</span>
                     <span v-if="success==1" style="color: green;">Thanks for purchasing</span>
                 </form>
+            </div>
+        </div>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading text-center">
+                <h3 class="panel-title">
+                    Payment is complete!
+                </h3>
+            </div>
+            <div class="panel-body" style="padding: 30px;">
+                THANK YOU FOR JOINING GAIGAI
+                <br>
+                <a href="https://www.letsgaigai.com/#/events" class="btn btn-primary" style="margin-top: 20px;">
+                    LOOK AT EVENTS
+                </a>
+            </div>
+        </div>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading text-center" style="background: #8e1414;">
+                <h3 class="panel-title">
+                    Payment Unsuccessful
+                </h3>
+            </div>
+            <div class="panel-body" style="padding: 30px;">
+                OOPS, THERE SEEMS TO BE A PROBLEM.
+                <br>
+                <button class="btn btn-primary" style="margin-top: 20px;">
+                    TRY AGAIN
+                </button>
             </div>
         </div>
     </div>
@@ -123,15 +156,15 @@
         background: #f2f2f2;
     }
 
-    .panel-primary{
+    .panel-primary {
         border-color: black;
     }
 
-    .btn-primary{
+    .btn-primary {
         background: black;
     }
 
-    label{
+    label {
         font-family: Brandon_bld;
         text-transform: uppercase;
     }

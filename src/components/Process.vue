@@ -8,7 +8,7 @@
                     SELECT PACKAGE
                 </div>
                 <div class="number">
-                    <span CLASS="active">2</span>
+                    <span class="active">2</span>
                     MEMBER DETAILS
                 </div>
                 <div class="number">
