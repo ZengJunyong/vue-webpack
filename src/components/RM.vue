@@ -32,16 +32,16 @@
         <div class="form-group" v-if="options.custom=='no'">
           <h4>3. What is the size of the dates package that you are selling?</h4>
           <label class="radio-inline">
-            <input type="radio" v-model="options.packages" value="1"> 1 date
+            <input type="radio" v-model="options.packages" value="0"> 1 date
           </label>
           <label class="radio-inline">
-            <input type="radio" v-model="options.packages" value="3"> 3 dates
+            <input type="radio" v-model="options.packages" value="1"> 3 dates
           </label>
           <label class="radio-inline">
-            <input type="radio" v-model="options.packages" value="5"> 5 dates
+            <input type="radio" v-model="options.packages" value="2"> 5 dates
           </label>
           <label class="radio-inline">
-            <input type="radio" v-model="options.packages" value="10"> 10 dates
+            <input type="radio" v-model="options.packages" value="3"> 10 dates
           </label>
           <label class="radio-inline">
             <input type="radio" v-model="options.packages" value="all"> All

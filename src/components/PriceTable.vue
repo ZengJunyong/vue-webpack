@@ -5,16 +5,21 @@
             <thead>
             <tr>
                 <th></th>
-                <th v-if="query.membership=='basic'">1 date package</th>
-                <th>3 date package</th>
-                <th>5 date package</th>
-                <th>10 date package</th>
+                <th v-if="query.membership=='basic'&&(query.packages=='0'||query.packages=='all')">1 date package</th>
+                <th v-if="query.packages=='1'||query.packages=='all'">3 date package</th>
+                <th v-if="query.packages=='2'||query.packages=='all'">5 date package</th>
+                <th v-if="query.packages=='3'||query.packages=='all'">10 date package</th>
             </tr>
             </thead>
             <tbody>
             <tr>
                 <td>No installment</td>
-                <td v-for="payment of stripe.payments">
+                <td v-for="(payment,index) in stripe.payments" v-if="query.membership=='basic'&&(query.packages==index||query.packages=='all')">
+                    S${{payment.amount}}
+                    <br>
+                    <button @click="choosePayment(payment)" type="button" class="btn btn-primary">Pay with Card</button>
+                </td>
+                <td v-for="(payment,index) in stripe.payments" v-if="query.membership!='basic'&&(query.packages-1==index||query.packages=='all')">
                     S${{payment.amount}}
                     <br>
                     <button @click="choosePayment(payment)" type="button" class="btn btn-primary">Pay with Card</button>
@@ -22,8 +27,8 @@
             </tr>
             <tr v-if="query.months>=3">
                 <td>3 months installment</td>
-                <td v-if="query.membership=='basic'"></td>
-                <td v-for="plan of stripe.plans['3 months']">
+                <td v-if="query.membership=='basic'&&(query.packages=='0'||query.packages=='all')"></td>
+                <td v-for="(plan,index) in stripe.plans['3 months']" v-if="query.packages-1==index||query.packages=='all'">
                     S${{plan.amount}}
                     <br>
                     <button @click="choosePayment(plan)" type="button" class="btn btn-primary">Subscribe</button>
@@ -31,8 +36,8 @@
             </tr>
             <tr v-if="query.months>=6">
                 <td>6 months installment</td>
-                <td v-if="query.membership=='basic'"></td>
-                <td v-for="plan of stripe.plans['6 months']">
+                <td v-if="query.membership=='basic'&&(query.packages=='0'||query.packages=='all')"></td>
+                <td v-for="(plan,index) in stripe.plans['6 months']" v-if="query.packages-1==index||query.packages=='all'">
                     S${{plan.amount}}
                     <br>
                     <button @click="choosePayment(plan)" type="button" class="btn btn-primary">Subscribe</button>
@@ -40,8 +45,8 @@
             </tr>
             <tr v-if="query.months>=9">
                 <td>9 months installment</td>
-                <td v-if="query.membership=='basic'"></td>
-                <td v-for="plan of stripe.plans['9 months']">
+                <td v-if="query.membership=='basic'&&(query.packages=='0'||query.packages=='all')"></td>
+                <td v-for="(plan,index) in stripe.plans['9 months']" v-if="query.packages-1==index||query.packages=='all'">
                     S${{plan.amount}}
                     <br>
                     <button @click="choosePayment(plan)" type="button" class="btn btn-primary">Subscribe</button>
@@ -49,8 +54,8 @@
             </tr>
             <tr v-if="query.months>=12">
                 <td>12 months installment</td>
-                <td v-if="query.membership=='basic'"></td>
-                <td v-for="plan of stripe.plans['12 months']">
+                <td v-if="query.membership=='basic'&&(query.packages=='0'||query.packages=='all')"></td>
+                <td v-for="(plan,index) in stripe.plans['12 months']" v-if="query.packages-1==index||query.packages=='all'">
                     S${{plan.amount}}
                     <br>
                     <button @click="choosePayment(plan)" type="button" class="btn btn-primary">Subscribe</button>
