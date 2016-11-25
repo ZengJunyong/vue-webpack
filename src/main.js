@@ -16,10 +16,9 @@ new Vue({
   render: h => h(App),
   router: new VueRouter({
     routes: [
-      {path: '/', redirect: '/full'},
+      {path: '/', redirect: '/price'},
       {path: '/rm', component: require('components/RM')},
-      {name: 'full', path: '/full', component: require('components/PriceTable')},
-      {name: '10off', path: '/10off', component: require('components/PriceTable')},
+      {name: 'price', path: '/price', component: require('components/PriceTable')},
       {name: 'custom', path: '/custom', component: require('components/Custom')},
       {name: 'custom2', path: '/custom2', component: require('components/Custom')},
       {name: 'custom3', path: '/custom3', component: require('components/Custom')},

@@ -89,7 +89,7 @@
                     .then(
                             function (res) {
                                 next(vm => {
-                                    vm.stripe = JSON.parse(res.body)[to.name]
+                                    vm.stripe = JSON.parse(res.body)[vm.$route.query.discount]
                                     vm.months = vm.$route.query.months * 1
                                 })
                             }

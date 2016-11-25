@@ -18,7 +18,19 @@
           </label>
         </div>
         <div class="form-group" v-if="options.custom=='no'">
-          <h4>2. How many months of installment do you want to show?</h4>
+          <h4>2. Which membership tier are you selling?</h4>
+          <label class="radio-inline">
+            <input type="radio" v-model="options.membership" value="basic"> Basic
+          </label>
+          <label class="radio-inline">
+            <input type="radio" v-model="options.membership" value="priority"> Priority
+          </label>
+          <label class="radio-inline">
+            <input type="radio" v-model="options.membership" value="elite"> Elite
+          </label>
+        </div>
+        <div class="form-group" v-if="options.custom=='no'">
+          <h4>3 How many months of installment do you want to show?</h4>
           <label class="radio-inline">
             <input type="radio" v-model="options.months" value="0"> Full
           </label>
@@ -36,12 +48,12 @@
           </label>
         </div>
         <div class="form-group" v-if="options.custom=='no'">
-          <h4>3. Did you use $300 discount?</h4>
+          <h4>4. Did you use $300 discount?</h4>
           <label class="radio-inline">
-            <input type="radio" v-model="options.discount" value="y"> Yes
+            <input type="radio" v-model="options.discount" value="discount"> Yes
           </label>
           <label class="radio-inline">
-            <input type="radio" v-model="options.discount" value="n"> No
+            <input type="radio" v-model="options.discount" value="full"> No
           </label>
         </div>
       </form>
@@ -70,11 +82,12 @@
     data: ->
       options:
         custom: 'no'
+        membership: 'basic'
         months: '0'
-        discount: 'n'
+        discount: 'full'
     computed:
       link: ->
-        @path + '#' + (if @options.discount is 'y' then '10off' else '') + '?custom=' + @options.custom + '&months=' + @options.months + '&discount=' + @options.discount
+        @path + '#?membership=' + @options.membership  + '&months=' + @options.months + '&discount=' + @options.discount
       path: -> document.location.origin + document.location.pathname
 </script>
 
