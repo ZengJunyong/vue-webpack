@@ -44,4 +44,10 @@
 </script>
 
 <style scoped>
+  .btn-primary {
+    color: #fff;
+    background-color: black;
+    border-color: black;
+    margin-bottom: 25px;
+  }
 </style>
