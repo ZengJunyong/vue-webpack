@@ -104,9 +104,6 @@
                                     vm.months = months * 1
                                     vm.membership = membership
                                     vm.packages = packages*1
-                                    if (membership!='basic'){
-                                        vm.packages
-                                    }
                                 })
                             }
                     )
