@@ -87,7 +87,7 @@
         discount: 'full'
     computed:
       link: ->
-        @path + '#?membership=' + @options.membership  + '&months=' + @options.months + '&discount=' + @options.discount
+        @path + '#price?membership=' + @options.membership  + '&months=' + @options.months + '&discount=' + @options.discount
       path: -> document.location.origin + document.location.pathname
 </script>
 
