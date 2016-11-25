@@ -5,24 +5,16 @@
             <thead>
             <tr>
                 <th></th>
-                <th v-if="membership=='basic'&&packages>=0">1 date package</th>
-                <th v-if="membership=='basic'&&packages>=1">3 date package</th>
-                <th v-if="membership=='basic'&&packages>=2">5 date package</th>
-                <th v-if="membership=='basic'&&packages>=3">10 date package</th>
-                <th v-if="membership!='basic'&&packages>=1">3 date package</th>
-                <th v-if="membership!='basic'&&packages>=2">5 date package</th>
-                <th v-if="membership!='basic'&&packages>=3">10 date package</th>
+                <th v-if="membership=='basic'">1 date package</th>
+                <th>3 date package</th>
+                <th>5 date package</th>
+                <th>10 date package</th>
             </tr>
             </thead>
             <tbody>
             <tr>
                 <td>No installment</td>
-                <td v-for="(payment,index) in stripe.payments" v-if="membership=='basic'&&packages>=index">
-                    S${{payment.amount}}
-                    <br>
-                    <button @click="choosePayment(payment)" type="button" class="btn btn-primary">Pay with Card</button>
-                </td>
-                <td v-for="(payment,index) in stripe.payments" v-if="membership!='basic'&&packages-1>=index">
+                <td v-for="payment of stripe.payments">
                     S${{payment.amount}}
                     <br>
                     <button @click="choosePayment(payment)" type="button" class="btn btn-primary">Pay with Card</button>
@@ -31,7 +23,7 @@
             <tr v-if="months>=3">
                 <td>3 months installment</td>
                 <td v-if="membership=='basic'"></td>
-                <td v-for="(plan,index) in stripe.plans['3 months']" v-if="packages-1>=index">
+                <td v-for="plan of stripe.plans['3 months']">
                     S${{plan.amount}}
                     <br>
                     <button @click="choosePayment(plan)" type="button" class="btn btn-primary">Subscribe</button>
@@ -40,7 +32,7 @@
             <tr v-if="months>=6">
                 <td>6 months installment</td>
                 <td v-if="membership=='basic'"></td>
-                <td v-for="(plan,index) in stripe.plans['6 months']" v-if="packages-1>=index">
+                <td v-for="plan of stripe.plans['6 months']">
                     S${{plan.amount}}
                     <br>
                     <button @click="choosePayment(plan)" type="button" class="btn btn-primary">Subscribe</button>
@@ -49,7 +41,7 @@
             <tr v-if="months>=9">
                 <td>9 months installment</td>
                 <td v-if="membership=='basic'"></td>
-                <td v-for="(plan,index) in stripe.plans['9 months']" v-if="packages-1>=index">
+                <td v-for="plan of stripe.plans['9 months']">
                     S${{plan.amount}}
                     <br>
                     <button @click="choosePayment(plan)" type="button" class="btn btn-primary">Subscribe</button>
@@ -58,7 +50,7 @@
             <tr v-if="months>=12">
                 <td>12 months installment</td>
                 <td v-if="membership=='basic'"></td>
-                <td v-for="(plan,index) in stripe.plans['12 months']" v-if="packages-1>=index">
+                <td v-for="plan of stripe.plans['12 months']">
                     S${{plan.amount}}
                     <br>
                     <button @click="choosePayment(plan)" type="button" class="btn btn-primary">Subscribe</button>
@@ -85,8 +77,7 @@
             return {
                 stripe: null,
                 months: null,
-                membership: null,
-                packages: null
+                membership: null
             }
         },
         methods: {
@@ -99,11 +90,10 @@
                     .then(
                             function (res) {
                                 next(vm => {
-                                    let {membership, discount, months, packages} = vm.$route.query;
+                                    const {membership, discount, months} = vm.$route.query;
                                     vm.stripe = JSON.parse(res.body)[membership][discount]
                                     vm.months = months * 1
                                     vm.membership = membership
-                                    vm.packages = packages*1
                                 })
                             }
                     )
