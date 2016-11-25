@@ -5,7 +5,7 @@
             <thead>
             <tr>
                 <th></th>
-                <th>1 date package</th>
+                <th v-if="membership=='basic'">1 date package</th>
                 <th>3 date package</th>
                 <th>5 date package</th>
                 <th>10 date package</th>
@@ -22,7 +22,7 @@
             </tr>
             <tr v-if="months>=3">
                 <td>3 months installment</td>
-                <td></td>
+                <td v-if="membership=='basic'"></td>
                 <td v-for="plan of stripe.plans['3 months']">
                     S${{plan.amount}}
                     <br>
@@ -31,7 +31,7 @@
             </tr>
             <tr v-if="months>=6">
                 <td>6 months installment</td>
-                <td></td>
+                <td v-if="membership=='basic'"></td>
                 <td v-for="plan of stripe.plans['6 months']">
                     S${{plan.amount}}
                     <br>
@@ -40,7 +40,7 @@
             </tr>
             <tr v-if="months>=9">
                 <td>9 months installment</td>
-                <td></td>
+                <td v-if="membership=='basic'"></td>
                 <td v-for="plan of stripe.plans['9 months']">
                     S${{plan.amount}}
                     <br>
@@ -49,7 +49,7 @@
             </tr>
             <tr v-if="months>=12">
                 <td>12 months installment</td>
-                <td></td>
+                <td v-if="membership=='basic'"></td>
                 <td v-for="plan of stripe.plans['12 months']">
                     S${{plan.amount}}
                     <br>
@@ -76,7 +76,8 @@
         data () {
             return {
                 stripe: null,
-                months: null
+                months: null,
+                membership: null
             }
         },
         methods: {
@@ -89,8 +90,10 @@
                     .then(
                             function (res) {
                                 next(vm => {
-                                    vm.stripe = JSON.parse(res.body)[vm.$route.query.membership][vm.$route.query.discount]
-                                    vm.months = vm.$route.query.months * 1
+                                    const {membership, discount, months} = vm.$route.query;
+                                    vm.stripe = JSON.parse(res.body)[membership][discount]
+                                    vm.months = months * 1
+                                    vm.membership = membership
                                 })
                             }
                     )
