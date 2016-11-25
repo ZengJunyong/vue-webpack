@@ -30,7 +30,22 @@
           </label>
         </div>
         <div class="form-group" v-if="options.custom=='no'">
-          <h4>3 How many months of installment do you want to show?</h4>
+          <h4>3. What is the size of the dates package that you are selling?</h4>
+          <label class="radio-inline">
+            <input type="radio" v-model="options.packages" value="0"> 1 date
+          </label>
+          <label class="radio-inline">
+            <input type="radio" v-model="options.packages" value="1"> 3 dates
+          </label>
+          <label class="radio-inline">
+            <input type="radio" v-model="options.packages" value="2"> 5 dates
+          </label>
+          <label class="radio-inline">
+            <input type="radio" v-model="options.packages" value="3"> 10 dates
+          </label>
+        </div>
+        <div class="form-group" v-if="options.custom=='no'">
+          <h4>4. How many months of installment do you want to show?</h4>
           <label class="radio-inline">
             <input type="radio" v-model="options.months" value="0"> Full
           </label>
@@ -48,7 +63,7 @@
           </label>
         </div>
         <div class="form-group" v-if="options.custom=='no'">
-          <h4>4. Did you use $300 discount?</h4>
+          <h4>5. Did you use $300 discount?</h4>
           <label class="radio-inline">
             <input type="radio" v-model="options.discount" value="discount"> Yes
           </label>
@@ -83,11 +98,12 @@
       options:
         custom: 'no'
         membership: 'basic'
+        packages: '3'
         months: '0'
         discount: 'full'
     computed:
       link: ->
-        @path + '#price?membership=' + @options.membership  + '&months=' + @options.months + '&discount=' + @options.discount
+        @path + '#price?membership=' + @options.membership  + '&months=' + @options.months + '&packages=' + @options.packages + '&discount=' + @options.discount
       path: -> document.location.origin + document.location.pathname
 </script>
 
