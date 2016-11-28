@@ -77,8 +77,9 @@
           panelLabel: this.plan.count ? 'Subscribe' : 'Pay S$' + this.plan.amount,
           token: function (token) {
             pay(Vue.util.extend(mixin, {
+              account: 'fleek',
               tokenId: token.id,
-              email: token.email,
+              email: token.email
             })).then((res) => {
               let {success} = res.body;
               if (success) {
