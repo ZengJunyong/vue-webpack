@@ -20,10 +20,10 @@
         <div class="form-group" v-if="options.custom=='no'">
           <h4>2. Which membership tier are you selling?</h4>
           <label class="radio-inline">
-            <input type="radio" v-model="options.membership" value="basic"> Basic
+            <input type="radio" v-model="options.membership" value="basic"> Classic
           </label>
           <label class="radio-inline">
-            <input type="radio" v-model="options.membership" value="priority"> Priority
+            <input type="radio" v-model="options.membership" value="priority"> Premium
           </label>
           <label class="radio-inline">
             <input type="radio" v-model="options.membership" value="elite"> Elite
