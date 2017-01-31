@@ -66,12 +66,18 @@
           </label>
         </div>
         <div class="form-group" v-if="options.custom=='no'">
-          <h4>5. Did you use $300 discount?</h4>
+          <h4>5. How much discount are you using?</h4>
           <label class="radio-inline">
-            <input type="radio" v-model="options.discount" value="discount"> Yes
+            <input type="radio" v-model="options.discount" value="full"> No discount
           </label>
           <label class="radio-inline">
-            <input type="radio" v-model="options.discount" value="full"> No
+            <input type="radio" v-model="options.discount" value="discount"> $100
+          </label>
+          <label class="radio-inline">
+            <input type="radio" v-model="options.discount" value="discount"> $200
+          </label>
+          <label class="radio-inline">
+            <input type="radio" v-model="options.discount" value="discount300"> $300
           </label>
         </div>
       </form>
