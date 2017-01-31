@@ -71,10 +71,10 @@
             <input type="radio" v-model="options.discount" value="full"> No discount
           </label>
           <label class="radio-inline">
-            <input type="radio" v-model="options.discount" value="discount"> $100
+            <input type="radio" v-model="options.discount" value="discount100"> $100
           </label>
           <label class="radio-inline">
-            <input type="radio" v-model="options.discount" value="discount"> $200
+            <input type="radio" v-model="options.discount" value="discount200"> $200
           </label>
           <label class="radio-inline">
             <input type="radio" v-model="options.discount" value="discount300"> $300
