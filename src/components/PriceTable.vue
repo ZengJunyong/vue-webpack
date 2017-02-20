@@ -4,13 +4,13 @@
       <th></th>
       <th>2 hours package</th>
       <th>6 hours package</th>
-      <th v-if="months!=12">8 hours package</th>
+      <th>8 hours package</th>
       <th>12 hours package</th>
       <th>18 hours package</th>
     </tr>
     <tr>
       <td>No installment</td>
-      <td v-for="payment of stripe.payments" v-if="!(payment.itemName.startsWith('8-')&&months==12)">
+      <td v-for="payment of stripe.payments">
         S${{payment.amount}}
         <br>
         <button @click="choosePayment(payment)" type="button" class="btn btn-primary">Pay with Card</button>
@@ -18,7 +18,7 @@
     </tr>
     <tr v-if="months>=3">
       <td>3 months installment</td>
-      <td v-for="plan of stripe.plans['3 months']"  v-if="!(plan.itemName.startsWith('8-')&&months==12)">
+      <td v-for="plan of stripe.plans['3 months']" >
         S${{plan.amount}}
         <br>
         <button @click="choosePayment(plan)" type="button" class="btn btn-primary">Subscribe</button>
@@ -27,7 +27,7 @@
     <tr v-if="months>=6">
       <td>6 months installment</td>
       <td></td>
-      <td v-for="plan of stripe.plans['6 months']"  v-if="!(plan.itemName.startsWith('8-')&&months==12)">
+      <td v-for="plan of stripe.plans['6 months']" >
         S${{plan.amount}}
         <br>
         <button @click="choosePayment(plan)" type="button" class="btn btn-primary">Subscribe</button>
@@ -36,7 +36,7 @@
     <tr v-if="months>=9">
       <td>9 months installment</td>
       <td></td>
-      <td v-for="plan of stripe.plans['9 months']"  v-if="!(plan.itemName.startsWith('8-')&&months==12)">
+      <td v-for="plan of stripe.plans['9 months']" >
         S${{plan.amount}}
         <br>
         <button @click="choosePayment(plan)" type="button" class="btn btn-primary">Subscribe</button>
@@ -45,7 +45,7 @@
     <tr v-if="months>=12">
       <td>12 months installment</td>
       <td></td>
-      <td v-for="plan of stripe.plans['12 months']"  v-if="!(plan.itemName.startsWith('8-')&&months==12)">
+      <td v-for="plan of stripe.plans['12 months']" >
         S${{plan.amount}}
         <br>
         <button @click="choosePayment(plan)" type="button" class="btn btn-primary">Subscribe</button>
