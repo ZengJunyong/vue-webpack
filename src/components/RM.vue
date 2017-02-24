@@ -8,7 +8,7 @@
     <div class="panel-body">
       <form>
         <div class="form-group">
-          <h4>2. How many months of installment do you want to show?</h4>
+          <h4>1. How many months of installment do you want to show?</h4>
           <label class="radio-inline">
             <input type="radio" v-model="options.months" value="0"> Full
           </label>
@@ -26,12 +26,12 @@
           </label>
         </div>
         <div class="form-group">
-          <h4>3. Did you use $100 discount?</h4>
+          <h4>2. Did you use $100 discount?</h4>
           <label class="radio-inline">
-            <input type="radio" v-model="options.discount" value="y"> Yes
+            <input type="radio" v-model="options.discount" value="full"> No discount
           </label>
           <label class="radio-inline">
-            <input type="radio" v-model="options.discount" value="n"> No
+            <input type="radio" v-model="options.discount" value="discount100"> $100
           </label>
         </div>
       </form>
@@ -51,10 +51,10 @@
     data: ->
       options:
         months: '0'
-        discount: 'n'
+        discount: 'full'
     computed:
       link: ->
-        @path + '#' + (if @options.discount is 'y' then '10off' else '') + '?months=' + @options.months + '&discount=' + @options.discount
+        @path + '#price?months=' + @options.months + '&discount=' + @options.discount
       path: -> document.location.origin + document.location.pathname
 </script>
 

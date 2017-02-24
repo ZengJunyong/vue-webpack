@@ -109,7 +109,7 @@
                   ]
               }
           },
-          "10off": {
+          "discount100": {
               "payments": [
                   {"amount": 700, "itemName": "2-hours package - $100 OFF"},
                   {"amount": 1799, "itemName": "6-hours package - $100 OFF"},
@@ -147,7 +147,7 @@
           }
       }
       next(vm => {
-        vm.stripe = config[to.name]
+        vm.stripe = config[vm.$route.query.discount]
         vm.months = vm.$route.query.months * 1
       })
     }
