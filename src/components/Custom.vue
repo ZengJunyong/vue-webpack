@@ -28,7 +28,17 @@
       }
     },
     beforeRouteEnter: (to, from, next) => {
-
+      // https://github.com/vuejs/vue-router/issues/648
+      getStripeConfig
+              .then(
+                      function (res) {
+                        next(
+                                function (vm) {
+                                  vm.plan = JSON.parse(res.body)[to.name]
+                                }
+                        )
+                      }
+              )
     }
   }
 </script>
