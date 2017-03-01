@@ -1,6 +1,6 @@
 <template>
   <div v-if="plan">
-    S${{plan.amount}}
+    MYR{{plan.amount}}
     <br>
     <button @click="choosePayment()" type="button" class="btn btn-primary">
       {{plan.count? 'Subscribe':'Pay with Card'}}
@@ -28,17 +28,7 @@
       }
     },
     beforeRouteEnter: (to, from, next) => {
-      // https://github.com/vuejs/vue-router/issues/648
-      getStripeConfig
-        .then(
-          function (res) {
-            next(
-              function (vm) {
-                vm.plan = JSON.parse(res.body)[to.name]
-              }
-            )
-          }
-        )
+
     }
   }
 </script>

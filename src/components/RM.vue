@@ -2,35 +2,35 @@
 
     <div style="margin: 30px 0 50px 0;">
       <form>
-        <div class="form-group">
-          <h4>1. Are you using custom links?</h4>
-          <label class="radio-inline">
-            <input type="radio" v-model="options.custom" value="no"> No
-          </label>
-          <label class="radio-inline">
-            <input type="radio" v-model="options.custom" value="link1"> Link1
-          </label>
-          <label class="radio-inline">
-            <input type="radio" v-model="options.custom" value="link2"> Link2
-          </label>
-          <label class="radio-inline">
-            <input type="radio" v-model="options.custom" value="link3"> Link3
-          </label>
-        </div>
+        <!--<div class="form-group">-->
+          <!--<h4>1. Are you using custom links?</h4>-->
+          <!--<label class="radio-inline">-->
+            <!--<input type="radio" v-model="options.custom" value="no"> No-->
+          <!--</label>-->
+          <!--<label class="radio-inline">-->
+            <!--<input type="radio" v-model="options.custom" value="link1"> Link1-->
+          <!--</label>-->
+          <!--<label class="radio-inline">-->
+            <!--<input type="radio" v-model="options.custom" value="link2"> Link2-->
+          <!--</label>-->
+          <!--<label class="radio-inline">-->
+            <!--<input type="radio" v-model="options.custom" value="link3"> Link3-->
+          <!--</label>-->
+        <!--</div>-->
         <div class="form-group" v-if="options.custom=='no'">
-          <h4>2. Which membership tier are you selling?</h4>
+          <h4>1. Which membership tier are you selling?</h4>
           <label class="radio-inline">
-            <input type="radio" v-model="options.membership" value="basic"> Classic
+            <input type="radio" v-model="options.membership" value="classic"> Classic
           </label>
           <label class="radio-inline">
-            <input type="radio" v-model="options.membership" value="priority"> Premium
+            <input type="radio" v-model="options.membership" value="priority"> Priority
           </label>
           <label class="radio-inline">
             <input type="radio" v-model="options.membership" value="elite"> Elite
           </label>
         </div>
         <div class="form-group" v-if="options.custom=='no'">
-          <h4>3. What is the size of the dates package that you are selling?</h4>
+          <h4>2. What is the size of the dates package that you are selling?</h4>
           <label class="radio-inline">
             <input type="radio" v-model="options.packages" value="0"> 1 date
           </label>
@@ -48,7 +48,7 @@
           </label>
         </div>
         <div class="form-group" v-if="options.custom=='no'">
-          <h4>4. How many months of installment do you want to show?</h4>
+          <h4>3. How many months of installment do you want to show?</h4>
           <label class="radio-inline">
             <input type="radio" v-model="options.months" value="0"> Full
           </label>
@@ -61,23 +61,17 @@
           <label class="radio-inline">
             <input type="radio" v-model="options.months" value="9"> 9 months
           </label>
-          <label class="radio-inline">
-            <input type="radio" v-model="options.months" value="12"> 12 months
-          </label>
         </div>
         <div class="form-group" v-if="options.custom=='no'">
-          <h4>5. How much discount are you using?</h4>
+          <h4>4. How much discount are you using?</h4>
           <label class="radio-inline">
             <input type="radio" v-model="options.discount" value="full"> No discount
           </label>
           <label class="radio-inline">
-            <input type="radio" v-model="options.discount" value="discount100"> $100
+            <input type="radio" v-model="options.discount" value="discount150"> MYR150
           </label>
           <label class="radio-inline">
-            <input type="radio" v-model="options.discount" value="discount200"> $200
-          </label>
-          <label class="radio-inline">
-            <input type="radio" v-model="options.discount" value="discount300"> $300
+            <input type="radio" v-model="options.discount" value="discount300"> MYR300
           </label>
         </div>
       </form>
@@ -106,9 +100,9 @@
     data: ->
       options:
         custom: 'no'
-        membership: 'basic'
+        membership: 'classic'
         packages: 'all'
-        months: '0'
+        months: '9'
         discount: 'full'
     computed:
       link: ->

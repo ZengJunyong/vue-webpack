@@ -3,7 +3,7 @@
         <nav class="navbar navbar-inverse">
             <div class="container" style="height: 75px;font-size: 14px;">
                 <div class="navbar-header">
-                    <a class="navbar-brand active" href="http://letsgaigai.com">
+                    <a class="navbar-brand active" href="https://www.mydatesmith.com/#/home">
                         <img class="logo" src="./assets/logo.png">
                     </a>
                 </div>
@@ -27,7 +27,7 @@
             <router-view></router-view>
         </div>
         <div class="copyright text-center">
-            Copyright © GaiGai Pte Ltd. Registration No.201505865K. All rights reserved.
+            Copyright © Datesmith. All rights reserved.
         </div>
     </div>
 </template>

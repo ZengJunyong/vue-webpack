@@ -5,7 +5,7 @@
             <div class="panel-heading text-center">
                 <h3 class="panel-title">
                     {{plan.itemName}}
-                    <span v-if="plan.count">, S${{plan.amount}} for each month, for {{plan.count}} instalments</span>
+                    <span v-if="plan.count">, MYR{{plan.amount}} for each month, for {{plan.count}} instalments</span>
                 </h3>
             </div>
             <div class="panel-body">
@@ -31,7 +31,7 @@
                             </button>
                             <button v-if="!plan.count" :disabled="!verify.$valid" type="submit"
                                     class="btn btn-block btn-primary">Pay
-                                S${{plan.amount}}
+                                MYR{{plan.amount}}
                             </button>
                         </div>
                     </div>
@@ -48,10 +48,10 @@
                 </h3>
             </div>
             <div class="panel-body" style="padding: 30px;">
-                THANK YOU FOR JOINING GAIGAI
+                THANK YOU FOR JOINING DATASMITH
                 <br>
-                <a href="https://www.letsgaigai.com/#/events" class="btn btn-primary" style="margin-top: 20px;">
-                    LOOK AT EVENTS
+                <a href="https://www.mydatesmith.com/#/home" class="btn btn-primary" style="margin-top: 20px;">
+                    GO
                 </a>
             </div>
         </div>
@@ -118,11 +118,11 @@
                 var mixin = Vue.util.extend(this.plan, this.user)
                 StripeCheckout.configure({
                     key,
-                    name: 'GaiGai Pte Ltd',
+                    name: 'PaktorMY Sdn Bhd',
                     description: this.plan.itemName,
-                    image: 'https://www.letsgaigai.com/gokaikai/assets/images/big.logo.png',
+                    image: 'https://www.mydatesmith.com/gokaikai/assets/images/stripe.logo.jpg',
                     allowRememberMe: false,
-                    panelLabel: this.plan.count ? 'Subscribe' : 'Pay S$' + this.plan.amount,
+                    panelLabel: this.plan.count ? 'Subscribe' : 'Pay MYR' + this.plan.amount,
                     token: function (token) {
                         pay(Vue.util.extend(mixin, {
                             tokenId: token.id,
