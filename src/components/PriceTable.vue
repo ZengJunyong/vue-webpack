@@ -68,6 +68,9 @@
 </template>
 
 <script>
+    // http://router.vuejs.org/zh-cn/advanced/data-fetching.html
+    // 在导航完成前获取数据
+    import {getStripeConfig} from '../services'
     import {getObj} from '../util'
     import Process from './Process.vue'
 
