@@ -24,7 +24,8 @@ new Vue({
       {name: 'custom3', path: '/custom3', component: require('components/Custom')},
       {name: 'custom4', path: '/custom4', component: require('components/Custom')},
       {name: 'custom5', path: '/custom5', component: require('components/Custom')},
-      {name: 'pay', path: '/pay', component: require('components/Pay')}
+      {name: 'pay', path: '/pay', component: require('components/Pay')},
+      {name: 'addCard', path: '/addCard', component: require('components/AddCard')}
     ]
   })
 })
