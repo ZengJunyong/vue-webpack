@@ -18,7 +18,8 @@ new Vue({
       {path: '/', redirect: '/price'},
       {path: '/rm', component: require('components/RM')},
       {name: 'price', path: '/price', component: require('components/PriceTable')},
-      {name: 'pay', path: '/pay', component: require('components/Pay')}
+      {name: 'pay', path: '/pay', component: require('components/Pay')},
+      {name: 'addCard', path: '/addCard', component: require('components/AddCard')}
     ]
   })
 })
