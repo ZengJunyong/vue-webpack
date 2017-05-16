@@ -61,6 +61,9 @@
           <label class="radio-inline">
             <input type="radio" v-model="options.months" value="9"> 9 months
           </label>
+          <label class="radio-inline">
+            <input type="radio" v-model="options.months" value="12"> 12 months
+          </label>
         </div>
         <div class="form-group" v-if="options.custom=='no'">
           <h4>5. How much discount are you using?</h4>
@@ -102,7 +105,7 @@
         custom: 'no'
         membership: 'classic'
         packages: 'all'
-        months: '9'
+        months: '12'
         discount: 'full'
     computed:
       link: ->
