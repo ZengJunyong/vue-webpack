@@ -15,12 +15,12 @@
             <tr>
                 <td>No installment</td>
                 <td v-for="(payment,index) in stripe.payments" v-if="query.membership=='basic'&&(query.packages==index||query.packages=='all')">
-                    S${{payment.amount}}
+                    HKD{{payment.amount}}
                     <br>
                     <button @click="choosePayment(payment)" type="button" class="btn btn-primary">Pay with Card</button>
                 </td>
                 <td v-for="(payment,index) in stripe.payments" v-if="query.membership!='basic'&&(query.packages-1==index||query.packages=='all')">
-                    S${{payment.amount}}
+                    HKD{{payment.amount}}
                     <br>
                     <button @click="choosePayment(payment)" type="button" class="btn btn-primary">Pay with Card</button>
                 </td>
@@ -29,7 +29,7 @@
                 <td>3 months installment</td>
                 <td v-if="query.membership=='basic'&&(query.packages=='0'||query.packages=='all')"></td>
                 <td v-for="(plan,index) in stripe.plans['3 months']" v-if="query.packages-1==index||query.packages=='all'">
-                    S${{plan.amount}}
+                    HKD{{plan.amount}}
                     <br>
                     <button @click="choosePayment(plan)" type="button" class="btn btn-primary">Subscribe</button>
                 </td>
@@ -38,7 +38,7 @@
                 <td>6 months installment</td>
                 <td v-if="query.membership=='basic'&&(query.packages=='0'||query.packages=='all')"></td>
                 <td v-for="(plan,index) in stripe.plans['6 months']" v-if="query.packages-1==index||query.packages=='all'">
-                    S${{plan.amount}}
+                    HKD{{plan.amount}}
                     <br>
                     <button @click="choosePayment(plan)" type="button" class="btn btn-primary">Subscribe</button>
                 </td>
@@ -47,7 +47,7 @@
                 <td>9 months installment</td>
                 <td v-if="query.membership=='basic'&&(query.packages=='0'||query.packages=='all')"></td>
                 <td v-for="(plan,index) in stripe.plans['9 months']" v-if="query.packages-1==index||query.packages=='all'">
-                    S${{plan.amount}}
+                    HKD{{plan.amount}}
                     <br>
                     <button @click="choosePayment(plan)" type="button" class="btn btn-primary">Subscribe</button>
                 </td>
@@ -56,7 +56,7 @@
                 <td>12 months installment</td>
                 <td v-if="query.membership=='basic'&&(query.packages=='0'||query.packages=='all')"></td>
                 <td v-for="(plan,index) in stripe.plans['12 months']" v-if="query.packages-1==index||query.packages=='all'">
-                    S${{plan.amount}}
+                    HKD{{plan.amount}}
                     <br>
                     <button @click="choosePayment(plan)" type="button" class="btn btn-primary">Subscribe</button>
                 </td>

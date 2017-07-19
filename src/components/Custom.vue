@@ -1,6 +1,6 @@
 <template>
   <div v-if="plan">
-    S${{plan.amount}}
+    HKD{{plan.amount}}
     <br>
     <button @click="choosePayment()" type="button" class="btn btn-primary">
       {{plan.count? 'Subscribe':'Pay with Card'}}
