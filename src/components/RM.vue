@@ -28,12 +28,12 @@
           <label class="radio-inline">
             <input type="radio" v-model="options.membership" value="basic"> Classic
           </label>
-          <label class="radio-inline">
-            <input type="radio" v-model="options.membership" value="priority"> Premium
-          </label>
-          <label class="radio-inline">
-            <input type="radio" v-model="options.membership" value="elite"> Elite
-          </label>
+          <!--<label class="radio-inline">-->
+            <!--<input type="radio" v-model="options.membership" value="priority"> Premium-->
+          <!--</label>-->
+          <!--<label class="radio-inline">-->
+            <!--<input type="radio" v-model="options.membership" value="elite"> Elite-->
+          <!--</label>-->
         </div>
         <div class="form-group" v-if="options.custom=='no'">
           <h4>3. What is the size of the dates package that you are selling?</h4>
@@ -77,13 +77,13 @@
             <input type="radio" v-model="options.discount" value="full"> No discount
           </label>
           <label class="radio-inline">
-            <input type="radio" v-model="options.discount" value="discount100"> $100
+            <input type="radio" v-model="options.discount" value="discount100"> HKD500
           </label>
           <label class="radio-inline">
-            <input type="radio" v-model="options.discount" value="discount200"> $200
+            <input type="radio" v-model="options.discount" value="discount200"> HKD1000
           </label>
           <label class="radio-inline">
-            <input type="radio" v-model="options.discount" value="discount300"> $300
+            <input type="radio" v-model="options.discount" value="discount300"> HKD1500
           </label>
         </div>
       </form>
