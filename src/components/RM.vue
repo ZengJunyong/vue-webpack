@@ -77,13 +77,13 @@
             <input type="radio" v-model="options.discount" value="full"> No discount
           </label>
           <label class="radio-inline">
-            <input type="radio" v-model="options.discount" value="discount100"> HKD500
+            <input type="radio" v-model="options.discount" value="discount100"> HKD1000
           </label>
           <label class="radio-inline">
-            <input type="radio" v-model="options.discount" value="discount200"> HKD1000
+            <input type="radio" v-model="options.discount" value="discount200"> HKD2000
           </label>
           <label class="radio-inline">
-            <input type="radio" v-model="options.discount" value="discount300"> HKD1500
+            <input type="radio" v-model="options.discount" value="discount300"> HKD3000
           </label>
         </div>
       </form>

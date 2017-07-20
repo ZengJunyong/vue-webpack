@@ -23,9 +23,9 @@
                 var customerId = this.$route.query.customerId
                 StripeCheckout.configure({
                     key,
-                    name: 'GaiGai Pte Ltd',
+                    name: 'Paktor Hong Kong Ltd',
                     description: 'Please add your card :-)',
-                    image: 'https://www.letsgaigai.com/gokaikai/assets/images/big.logo.png',
+                    image: 'https://www.heydouble.com/gokaikai/assets/images/logo2.png',
                     allowRememberMe: false,
                     panelLabel: 'Add',
                     token: function (token) {

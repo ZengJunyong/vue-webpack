@@ -114,9 +114,9 @@
                 var mixin = Vue.util.extend(this.plan, this.user)
                 StripeCheckout.configure({
                     key,
-                    name: 'GaiGai Pte Ltd',
+                    name: 'Paktor Hong Kong Ltd',
                     description: this.plan.itemName,
-                    image: 'https://www.letsgaigai.com/gokaikai/assets/images/big.logo.png',
+                    image: 'https://www.heydouble.com/gokaikai/assets/images/logo2.png',
                     allowRememberMe: false,
                     panelLabel: this.plan.count ? 'Subscribe' : 'Pay HKD' + this.plan.amount,
                     token: function (token) {
