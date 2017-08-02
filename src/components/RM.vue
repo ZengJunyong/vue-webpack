@@ -85,6 +85,12 @@
           <label class="radio-inline">
             <input type="radio" v-model="options.discount" value="discount300"> HKD3000
           </label>
+          <label class="radio-inline" v-if="show">
+            <input type="radio" v-model="options.discount" value="discount400"> HKD4000
+          </label>
+          <label class="radio-inline" v-if="show">
+            <input type="radio" v-model="options.discount" value="discount500"> HKD5000
+          </label>
         </div>
       </form>
 
@@ -126,6 +132,7 @@
       link: ->
         @path + '#price?membership=' + @options.membership  + '&months=' + @options.months + '&packages=' + @options.packages + '&discount=' + @options.discount
       path: -> document.location.origin + document.location.pathname
+      show: -> @$route.query.show
 </script>
 
 <style scoped>
