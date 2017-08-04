@@ -92,7 +92,7 @@
             <input type="radio" v-model="options.discount" value="discount500"> HKD5000
           </label>
           <label class="radio-inline" v-if="show">
-            <input type="radio" v-model="options.discount" value="discount6500"> HKD5000
+            <input type="radio" v-model="options.discount" value="discount6500"> HKD6500
           </label>
         </div>
       </form>
