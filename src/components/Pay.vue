@@ -3,7 +3,7 @@
     <div class="panel-heading text-center">
       <h3 class="panel-title">
         {{plan.itemName}}
-        <span v-if="plan.count">, S${{plan.amount}} for each month, for {{plan.count}} instalments</span>
+        <span v-if="plan.count">, MYR{{plan.amount}} for each month, for {{plan.count}} instalments</span>
       </h3>
     </div>
     <div class="panel-body">
@@ -20,7 +20,7 @@
         <button v-if="plan.count" :disabled="!verify.$valid" type="submit" class="btn btn-primary">Subscribe
         </button>
         <button v-if="!plan.count" :disabled="!verify.$valid" type="submit" class="btn btn-primary">Pay
-          S${{plan.amount}}
+          MYR{{plan.amount}}
         </button>
 
         <span v-if="success==0" style="color: red;">Opps, something is wrong!</span>
@@ -74,7 +74,7 @@
           description: this.plan.itemName,
           image: 'https://www.letsgaigai.com/gokaikai/assets/images/big.logo.png',
           allowRememberMe: false,
-          panelLabel: this.plan.count ? 'Subscribe' : 'Pay S$' + this.plan.amount,
+          panelLabel: this.plan.count ? 'Subscribe' : 'Pay MYR' + this.plan.amount,
           token: function (token) {
             pay(Vue.util.extend(mixin, {
               account: 'fleek',

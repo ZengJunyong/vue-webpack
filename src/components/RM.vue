@@ -25,21 +25,21 @@
             <input type="radio" v-model="options.months" value="12"> 12 months
           </label>
         </div>
-        <div class="form-group">
-          <h4>2. Did you use $100 discount?</h4>
-          <label class="radio-inline">
-            <input type="radio" v-model="options.discount" value="full"> No discount
-          </label>
-          <label class="radio-inline">
-            <input type="radio" v-model="options.discount" value="discount100"> $100
-          </label>
-          <label class="radio-inline">
-            <input type="radio" v-model="options.discount" value="discount200"> $200
-          </label>
-          <label class="radio-inline">
-            <input type="radio" v-model="options.discount" value="discount300"> $300
-          </label>
-        </div>
+        <!--<div class="form-group">-->
+          <!--<h4>2. Did you use $100 discount?</h4>-->
+          <!--<label class="radio-inline">-->
+            <!--<input type="radio" v-model="options.discount" value="full"> No discount-->
+          <!--</label>-->
+          <!--<label class="radio-inline">-->
+            <!--<input type="radio" v-model="options.discount" value="discount100"> $100-->
+          <!--</label>-->
+          <!--<label class="radio-inline">-->
+            <!--<input type="radio" v-model="options.discount" value="discount200"> $200-->
+          <!--</label>-->
+          <!--<label class="radio-inline">-->
+            <!--<input type="radio" v-model="options.discount" value="discount300"> $300-->
+          <!--</label>-->
+        <!--</div>-->
       </form>
 
       <p>

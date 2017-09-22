@@ -12,7 +12,7 @@
         <li :class="{active: $route.name == '10off'}" v-if="$route.query.discount=='y'">
           <router-link
             :to="{ name: '10off', query: { custom: $route.query.custom,discount:$route.query.discount,months:$route.query.months }}">
-            S$300 OFF
+            MYR300 OFF
           </router-link>
         </li>
       </ul>

@@ -1,8 +1,8 @@
 npm run build
-cd ~/paktor/gokaikai/packages/system/public/assets/static/payment.fleek
+cd ~/paktor/kaikai-ms/packages/system/public/assets/static/payment.fleek
 rm -rf *
 cp -rf ~/learn/vue.js/vue-cli/webpack/dist/* .
-cd ~/paktor/gokaikai
+cd ~/paktor/kaikai-ms
 git rm packages/system/public/assets/static/payment.fleek/*
 git add packages/system/public/assets/static/payment.fleek/*
 git commit -m "stripe fleek update"
