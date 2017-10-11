@@ -1,14 +1,14 @@
 @font-face {
     font-family: Brandon_blk;
-    src: url(fonts/Brandon_blk.otf) format("opentype");
+    src: url('./fonts/Brandon_blk.otf') format("opentype");
 }
 @font-face {
     font-family: Brandon_reg;
-    src: url(fonts/Brandon_reg.otf) format("opentype");
+    src: url('./fonts/Brandon_reg.otf') format("opentype");
 }
 @font-face {
     font-family: Brandon_bld;
-    src: url(fonts/Brandon_bld.otf) format("opentype");
+    src: url('./fonts/Brandon_bld.otf') format("opentype");
 }
 
 body {
