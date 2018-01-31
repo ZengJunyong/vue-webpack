@@ -16,6 +16,9 @@
           <label class="radio-inline">
             <input type="radio" v-model="options.custom" value="link3"> Link3
           </label>
+          <label class="radio-inline">
+            <input type="radio" v-model="options.custom" value="link4"> One-off Date
+          </label>
         </div>
         <div class="form-group" v-if="options.custom=='no'">
           <h4>2. Which membership tier are you selling?</h4>
@@ -91,6 +94,9 @@
         </a>
         <a v-if="options.custom=='link3'" :href="path+'#custom3'">
           {{path}}#custom3
+        </a>
+        <a v-if="options.custom=='link4'" :href="path+'#custom4'">
+          {{path}}#custom4
         </a>
       </p>
     </div>
