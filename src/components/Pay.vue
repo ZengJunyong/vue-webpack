@@ -48,7 +48,7 @@
                 </h3>
             </div>
             <div class="panel-body" style="padding: 30px;">
-                THANK YOU FOR JOINING DATASMITH
+                THANK YOU FOR JOINING DATESMITH
                 <br>
                 <a href="https://www.mydatesmith.com/#/home" class="btn btn-primary" style="margin-top: 20px;">
                     GO
