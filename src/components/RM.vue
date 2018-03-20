@@ -36,25 +36,7 @@
           <!--</label>-->
         </div>
         <div class="form-group" v-if="options.custom=='no'">
-          <h4>3. What is the size of the dates package that you are selling?</h4>
-          <label class="radio-inline">
-            <input type="radio" v-model="options.packages" value="0"> 1 date
-          </label>
-          <label class="radio-inline">
-            <input type="radio" v-model="options.packages" value="1"> 3 dates
-          </label>
-          <label class="radio-inline">
-            <input type="radio" v-model="options.packages" value="2"> 5 dates
-          </label>
-          <label class="radio-inline">
-            <input type="radio" v-model="options.packages" value="3"> 10 dates
-          </label>
-          <label class="radio-inline">
-            <input type="radio" v-model="options.packages" value="all"> All
-          </label>
-        </div>
-        <div class="form-group" v-if="options.custom=='no'">
-          <h4>4. How many months of installment do you want to show?</h4>
+          <h4>3. How many months of installment do you want to show?</h4>
           <label class="radio-inline">
             <input type="radio" v-model="options.months" value="0"> Full
           </label>
@@ -72,7 +54,7 @@
           </label>
         </div>
         <div class="form-group" v-if="options.custom=='no'">
-          <h4>5. How much discount are you using?</h4>
+          <h4>4. How much discount are you using?</h4>
           <label class="radio-inline">
             <input type="radio" v-model="options.discount" value="full"> No discount
           </label>
@@ -81,9 +63,6 @@
           </label>
           <label class="radio-inline">
             <input type="radio" v-model="options.discount" value="discount200"> HKD2000
-          </label>
-          <label class="radio-inline">
-            <input type="radio" v-model="options.discount" value="discount300"> HKD3000
           </label>
           <label class="radio-inline" v-if="show">
             <input type="radio" v-model="options.discount" value="discount400"> HKD4000
