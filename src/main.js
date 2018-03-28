@@ -19,6 +19,7 @@ new Vue({
       {path: '/', redirect: '/custom'},
       {path: '/rm', component: require('components/RM')},
       {path: '/rm2', component: require('components/RM2')},
+      {path: '/rm3', component: require('components/RM3')},
       {name: 'price', path: '/price', component: require('components/PriceTable')},
       {name: 'custom', path: '/custom', component: require('components/Custom')},
       {name: 'custom2', path: '/custom2', component: require('components/Custom')},
