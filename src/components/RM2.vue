@@ -194,7 +194,7 @@
       <div class="form-group">
         <h4>13. How many months of instalment do you want? ({{rate}})</h4>
         <label class="radio-inline">
-          <input type="radio" v-model.number="rate" value="1">
+          <input type="radio" v-model.number="rate" value="0.9">
           Full
         </label>
         <label class="radio-inline">
@@ -246,6 +246,9 @@
         (t * @rate).toFixed(0)
     methods:
       generateLink: ->
+        if @rate is 1
+          alert 'The last question: How many months of instalment do you want?\nYou should choose an option.'
+          return
         if confirm 'All the options are OK?'
           console.log 'go'
 
