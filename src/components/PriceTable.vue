@@ -100,7 +100,7 @@
                                 next(vm => {
                                     let {query} = vm.$route
                                     const {membership, discount} = query;
-                                    vm.stripe = JSON.parse(res.body)[membership][discount]
+                                    vm.stripe = res.body[membership][discount]
                                     vm.query = query
                                 })
                             }
