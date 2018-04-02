@@ -34,7 +34,7 @@
                       function (res) {
                         next(
                                 function (vm) {
-                                  vm.plan = JSON.parse(res.body)[to.name]
+                                  vm.plan = res.body[to.name]
                                 }
                         )
                       }
