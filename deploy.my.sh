@@ -1,8 +1,8 @@
 npm run build
-cd ~/paktor/kaikai-ms/packages/system/public/assets/static/payment
+cd ~/paktor/web-datesmith/packages/system/public/assets/static/payment
 rm -rf *
 cp -rf ~/learn/vue.js/vue-cli/webpack/dist/* .
-cd ~/paktor/kaikai-ms
+cd ~/paktor/web-datesmith
 git rm packages/system/public/assets/static/payment/*
 git add packages/system/public/assets/static/payment/*
 git commit -m "stripe MY update"
