@@ -8,7 +8,7 @@
                 <th v-if="query.membership=='classic'&&(query.packages=='0'||query.packages=='all')">1 date package</th>
                 <th v-if="query.packages=='1'||query.packages=='all'">3 date package</th>
                 <th v-if="query.packages=='2'||query.packages=='all'">5 date package</th>
-                <th v-if="query.packages=='3'||query.packages=='all'">10 date package</th>
+                <th v-if="query.packages=='3'||query.packages=='all'">8 date package</th>
             </tr>
             </thead>
             <tbody>

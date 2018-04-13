@@ -26,7 +26,7 @@
             <input type="radio" v-model="options.membership" value="classic"> Classic
           </label>
           <label class="radio-inline">
-            <input type="radio" v-model="options.membership" value="priority"> Priority
+            <input type="radio" v-model="options.membership" value="premium"> Premium
           </label>
           <label class="radio-inline">
             <input type="radio" v-model="options.membership" value="elite"> Elite
@@ -44,7 +44,7 @@
             <input type="radio" v-model="options.packages" value="2"> 5 dates
           </label>
           <label class="radio-inline">
-            <input type="radio" v-model="options.packages" value="3"> 10 dates
+            <input type="radio" v-model="options.packages" value="3"> 8 dates
           </label>
           <label class="radio-inline">
             <input type="radio" v-model="options.packages" value="all"> All
@@ -74,7 +74,10 @@
             <input type="radio" v-model="options.discount" value="full"> No discount
           </label>
           <label class="radio-inline">
-            <input type="radio" v-model="options.discount" value="discount150"> MYR150
+            <input type="radio" v-model="options.discount" value="discount100"> MYR100
+          </label>
+          <label class="radio-inline">
+            <input type="radio" v-model="options.discount" value="discount200"> MYR200
           </label>
           <label class="radio-inline">
             <input type="radio" v-model="options.discount" value="discount300"> MYR300
