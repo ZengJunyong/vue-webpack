@@ -1,8 +1,8 @@
-npm run build
-cd ~/paktor/gokaikai/packages/system/public/assets/static/payment.fleek
+n use 5.12.0 build/build.js
+cd ~/paktor/github/web-gaigai/packages/system/public/assets/static/payment.fleek
 rm -rf *
 cp -rf ~/learn/vue.js/vue-cli/webpack/dist/* .
-cd ~/paktor/gokaikai
+cd ~/paktor/github/web-gaigai
 git rm packages/system/public/assets/static/payment.fleek/*
 git add packages/system/public/assets/static/payment.fleek/*
 git commit -m "stripe fleek update"
