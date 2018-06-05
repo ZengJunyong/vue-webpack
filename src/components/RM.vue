@@ -31,9 +31,6 @@
           <label class="radio-inline">
             <input type="radio" v-model="options.membership" value="priority"> Premium
           </label>
-          <label class="radio-inline">
-            <input type="radio" v-model="options.membership" value="elite"> Elite
-          </label>
         </div>
         <div class="form-group" v-if="options.custom=='no'">
           <h4>3. What is the size of the dates package that you are selling?</h4>
@@ -47,7 +44,7 @@
             <input type="radio" v-model="options.packages" value="2"> 5 dates
           </label>
           <label class="radio-inline">
-            <input type="radio" v-model="options.packages" value="3"> 10 dates
+            <input type="radio" v-model="options.packages" value="3"> 8 dates
           </label>
           <label class="radio-inline">
             <input type="radio" v-model="options.packages" value="all"> All
