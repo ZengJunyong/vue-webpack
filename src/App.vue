@@ -4,7 +4,7 @@
             <div class="container" style="height: 75px;font-size: 14px;">
                 <div class="navbar-header">
                     <a class="navbar-brand active" href="https://www.heydouble.com/">
-                        <img class="logo" src="https://www.heydouble.com/gokaikai/assets/images/logo.png">
+                        <img class="logo" src="https://www.heydouble.com/gokaikai/assets/images/logo.png" style="height: 45px;">
                     </a>
                 </div>
             </div>

@@ -48,7 +48,7 @@
                 </h3>
             </div>
             <div class="panel-body" style="padding: 30px;">
-                THANK YOU FOR JOINING DOUBLE
+                THANK YOU FOR JOINING HEYDOUBLE
             </div>
         </div>
 
