@@ -2,11 +2,11 @@
   <table class="table" v-if="stripe">
     <tr>
       <th></th>
-      <th>2 hours package</th>
       <th>6 hours package</th>
       <th>8 hours package</th>
       <th>12 hours package</th>
       <th>18 hours package</th>
+      <th>24 hours package</th>
     </tr>
     <tr>
       <td>No installment</td>
@@ -26,7 +26,6 @@
     </tr>
     <tr v-if="months>=6">
       <td>6 months installment</td>
-      <td></td>
       <td v-for="plan of stripe.plans['6 months']" >
         MYR{{plan.amount}}
         <br>
@@ -77,35 +76,36 @@
       var config = {
           "full": {
               "payments": [
-                  {"amount": 800, "itemName": "2-hours package - No Installment"},
-                  {"amount": 1899, "itemName": "6-hours package - No Installment"},
-                  {"amount": 2499, "itemName": "8-hours package - No Installment"},
-                  {"amount": 2999, "itemName": "12-hours package - No Installment"},
-                  {"amount": 3599, "itemName": "18-hours package - No Installment"}
+                  {"amount": 1800, "itemName": "6-hours package - No Installment"},
+                  {"amount": 2400, "itemName": "8-hours package - No Installment"},
+                  {"amount": 3500, "itemName": "12-hours package - No Installment"},
+                  {"amount": 5000, "itemName": "18-hours package - No Installment"},
+                  {"amount": 6500, "itemName": "24-hours package - No Installment"}
               ],
               "plans": {
                 "3 months": [
-                  {"amount": 266.67, "itemName": "2-hours package - 3 months", "count": 3, "id": "full-2-3-sep-2017"},
-                  {"amount": 633, "itemName": "6-hours package - 3 months", "count": 3, "id": "full-6-3-sep-2017"},
-                  {"amount": 333, "itemName": "8-hours package - 3 months", "count": 3, "id": "full-8-3-sep-2017"},
-                  {"amount": 999.67, "itemName": "12-hours package - 3 months", "count": 3, "id": "full-12-3-sep-2017"},
-                  {"amount": 1199.67, "itemName": "18-hours package - 3 months", "count": 3, "id": "full-18-3-sep-2017"}
+                  {"amount": 600, "itemName": "6-hours package - 3 months", "count": 3, "id": "fleek-6-3-aug-2018"},
+                  {"amount": 800, "itemName": "8-hours package - 3 months", "count": 3, "id": "fleek-8-3-aug-2018"},
+                  {"amount": 1166.67, "itemName": "12-hours package - 3 months", "count": 3, "id": "fleek-12-3-aug-2018"},
+                  {"amount": 1666.67, "itemName": "18-hours package - 3 months", "count": 3, "id": "fleek-18-3-aug-2018"},
+                  {"amount": 2166.67, "itemName": "24-hours package - 3 months", "count": 3, "id": "fleek-24-3-aug-2018"}
                 ],
                 "6 months": [
-                  {"amount": 316.5, "itemName": "6-hours package - 6 months", "count": 6, "id": "full-6-6-sep-2017"},
-                  {"amount": 416.5, "itemName": "8-hours package - 6 months", "count": 6, "id": "full-8-6-sep-2017"},
-                  {"amount": 499.83, "itemName": "12-hours package - 6 months", "count": 6, "id": "full-12-6-sep-2017"},
-                  {"amount": 599.83, "itemName": "18-hours package - 6 months", "count": 6, "id": "full-18-6-sep-2017"}
+                  {"amount": 300, "itemName": "6-hours package - 6 months", "count": 6, "id": "fleek-6-6-aug-2018"},
+                  {"amount": 400, "itemName": "8-hours package - 6 months", "count": 6, "id": "fleek-8-6-aug-2018"},
+                  {"amount": 583.33, "itemName": "12-hours package - 6 months", "count": 6, "id": "fleek-12-6-aug-2018"},
+                  {"amount": 833.33, "itemName": "18-hours package - 6 months", "count": 6, "id": "fleek-18-6-aug-2018"},
+                  {"amount": 1083.33, "itemName": "24-hours package - 6 months", "count": 6, "id": "fleek-24-6-aug-2018"}
                 ],
                 "9 months": [
-                  {"amount": 277.67, "itemName": "8-hours package - 9 months", "count": 9, "id": "full-8-9-sep-2017"},
-                  {"amount": 333.22, "itemName": "12-hours package - 9 months", "count": 9, "id": "full-12-9-sep-2017"},
-                  {"amount": 399.89, "itemName": "18-hours package - 9 months", "count": 9, "id": "full-18-9-sep-2017"}
+                  {"amount": 388.89, "itemName": "12-hours package - 9 months", "count": 9, "id": "fleek-12-9-aug-2018"},
+                  {"amount": 555.56, "itemName": "18-hours package - 9 months", "count": 9, "id": "fleek-18-9-aug-2018"},
+                  {"amount": 722.22, "itemName": "24-hours package - 9 months", "count": 9, "id": "fleek-24-9-aug-2018"}
                 ],
                 "12 months": [
-                  {"amount": 208.25, "itemName": "8-hours package - 12 months", "count": 12, "id": "full-8-12-sep-2017"},
-                  {"amount": 249.92, "itemName": "12-hours package - 12 months", "count": 12, "id": "full-12-12-sep-2017"},
-                  {"amount": 299.92, "itemName": "18-hours package - 12 months", "count": 12, "id": "full-18-12-sep-2017"}
+                  {"amount": 291.67, "itemName": "12-hours package - 12 months", "count": 12, "id": "fleek-12-12-aug-2018"},
+                  {"amount": 416.67, "itemName": "18-hours package - 12 months", "count": 12, "id": "fleek-18-12-aug-2018"},
+                  {"amount": 541.67, "itemName": "24-hours package - 12 months", "count": 12, "id": "fleek-24-12-aug-2018"}
                 ]
               }
           }
