@@ -70,14 +70,13 @@
         var mixin = Vue.util.extend(this.plan, this.user)
         StripeCheckout.configure({
           key,
-          name: 'GaiGai Pte Ltd',
+          name: 'PaktorMY Sdn Bhd',
           description: this.plan.itemName,
-          image: 'https://www.letsgaigai.com/gokaikai/assets/images/big.logo.png',
+          image: 'https://www.mydatesmith.com/gokaikai/assets/images/stripe.logo.jpg',
           allowRememberMe: false,
           panelLabel: this.plan.count ? 'Subscribe' : 'Pay MYR' + this.plan.amount,
           token: function (token) {
             pay(Vue.util.extend(mixin, {
-              account: 'fleek',
               tokenId: token.id,
               email: token.email
             })).then((res) => {
