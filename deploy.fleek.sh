@@ -1,8 +1,8 @@
 npm run build
-cd ~/paktor/kaikai-ms/packages/system/public/assets/static/payment.fleek
+cd /Users/yong/paktor/github/web-datesmith/packages/system/public/assets/static/payment.fleek
 rm -rf *
 cp -rf ~/learn/vue.js/vue-cli/webpack/dist/* .
-cd ~/paktor/kaikai-ms
+cd /Users/yong/paktor/github/web-datesmith/
 git rm packages/system/public/assets/static/payment.fleek/*
 git add packages/system/public/assets/static/payment.fleek/*
 git commit -m "stripe fleek update"
