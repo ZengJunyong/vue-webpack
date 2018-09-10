@@ -5,8 +5,8 @@
   "author": "yong <zengjunyong@gmail.com>",
   "private": true,
   "scripts": {
-    "dev": "node build/dev-server.js",
-    "build": "node build/build.js",
+    "dev": "n use 5.12.0 build/dev-server.js",
+    "build": "n use 5.12.0 build/build.js",
     "deploy-GG": "./deploy.sh",
     "deploy-Fleek": "./deploy.fleek.sh"
   },

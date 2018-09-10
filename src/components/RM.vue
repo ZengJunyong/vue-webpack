@@ -39,6 +39,12 @@
           <label class="radio-inline">
             <input type="radio" v-model="options.discount" value="discount300"> $300
           </label>
+          <label class="radio-inline">
+            <input type="radio" v-model="options.discount" value="discount400"> $400
+          </label>
+          <label class="radio-inline">
+            <input type="radio" v-model="options.discount" value="discount500"> $500
+          </label>
         </div>
       </form>
 

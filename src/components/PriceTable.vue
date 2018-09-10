@@ -273,6 +273,104 @@
               {"amount": 383.25, "itemName": "24-hours package - $300 off - 12 months", "count": 12, "id": "discount300-24-12-may-2018"}
             ]
           }
+        },
+        "discount400": {
+          "payments": [
+            {"amount": 800, "itemName": "2-hours package"},
+            {"amount": 1499, "itemName": "6-hours package - $400 OFF"},
+            {"amount": 2099, "itemName": "8-hours package - $400 OFF"},
+            {"amount": 2599, "itemName": "12-hours package - $400 OFF"},
+            {"amount": 3199, "itemName": "18-hours package - $400 OFF"},
+            {"amount": 3599, "itemName": "20-hours package - $400 OFF"},
+            {"amount": 3999, "itemName": "22-hours package - $400 OFF"},
+            {"amount": 4299, "itemName": "24-hours package - $400 OFF"}
+          ],
+          "plans": {
+            "3 months": [
+              {"amount": 266.67, "itemName": "2-hours package - 3 months", "count": 3, "id": "discount300-2-3-feb-2017"},
+              {"amount": 499.67, "itemName": "6-hours package - $400 off - 3 months", "count": 3, "id": "discount400-6-3-sep-2018"},
+              {"amount": 699.67, "itemName": "8-hours package - $400 off - 3 months", "count": 3, "id": "discount400-8-3-sep-2018"},
+              {"amount": 866.33, "itemName": "12-hours package - $400 off - 3 months", "count": 3, "id": "discount400-12-3-sep-2018"},
+              {"amount": 1066.33, "itemName": "18-hours package - $400 off - 3 months", "count": 3, "id": "discount400-18-3-sep-2018"},
+              {"amount": 1199.67, "itemName": "20-hours package - $400 off - 3 months", "count": 3, "id": "discount400-20-3-sep-2018"},
+              {"amount": 1333, "itemName": "22-hours package - $400 off - 3 months", "count": 3, "id": "discount400-22-3-sep-2018"},
+              {"amount": 1433, "itemName": "24-hours package - $400 off - 3 months", "count": 3, "id": "discount400-24-3-sep-2018"}
+            ],
+            "6 months": [
+              {"amount": 249.83, "itemName": "6-hours package - $400 off - 6 months", "count": 6, "id": "discount400-6-6-sep-2018"},
+              {"amount": 349.83, "itemName": "8-hours package - $400 off - 6 months", "count": 6, "id": "discount400-8-6-sep-2018"},
+              {"amount": 433.17, "itemName": "12-hours package - $400 off - 6 months", "count": 6, "id": "discount400-12-6-sep-2018"},
+              {"amount": 533.17, "itemName": "18-hours package - $400 off - 6 months", "count": 6, "id": "discount400-18-6-sep-2018"},
+              {"amount": 599.83, "itemName": "20-hours package - $400 off - 6 months", "count": 6, "id": "discount400-20-6-sep-2018"},
+              {"amount": 666.5, "itemName": "22-hours package - $400 off - 6 months", "count": 6, "id": "discount400-22-6-sep-2018"},
+              {"amount": 716.5, "itemName": "24-hours package - $400 off - 6 months", "count": 6, "id": "discount400-24-6-sep-2018"}
+            ],
+            "9 months": [
+              {"amount": 233.22, "itemName": "8-hours package - $400 off - 9 months", "count": 9, "id": "discount400-8-9-sep-2018"},
+              {"amount": 288.78, "itemName": "12-hours package - $400 off - 9 months", "count": 9, "id": "discount400-12-9-sep-2018"},
+              {"amount": 355.44, "itemName": "18-hours package - $400 off - 9 months", "count": 9, "id": "discount400-18-9-sep-2018"},
+              {"amount": 399.89, "itemName": "20-hours package - $400 off - 9 months", "count": 9, "id": "discount400-20-9-sep-2018"},
+              {"amount": 444.33, "itemName": "22-hours package - $400 off - 9 months", "count": 9, "id": "discount400-22-9-sep-2018"},
+              {"amount": 477.67, "itemName": "24-hours package - $400 off - 9 months", "count": 9, "id": "discount400-24-9-sep-2018"}
+            ],
+            "12 months": [
+              {"amount": 174.92, "itemName": "8-hours package - $400 off - 12 months", "count": 12, "id": "discount400-8-12-sep-2018"},
+              {"amount": 216.58, "itemName": "12-hours package - $400 off - 12 months", "count": 12, "id": "discount400-12-12-sep-2018"},
+              {"amount": 266.58, "itemName": "18-hours package - $400 off - 12 months", "count": 12, "id": "discount400-18-12-sep-2018"},
+              {"amount": 299.92, "itemName": "20-hours package - $400 off - 12 months", "count": 12, "id": "discount400-20-12-sep-2018"},
+              {"amount": 333.25, "itemName": "22-hours package - $400 off - 12 months", "count": 12, "id": "discount400-22-12-sep-2018"},
+              {"amount": 358.25, "itemName": "24-hours package - $400 off - 12 months", "count": 12, "id": "discount400-24-12-sep-2018"}
+            ]
+          }
+        },
+        "discount500": {
+          "payments": [
+            {"amount": 800, "itemName": "2-hours package"},
+            {"amount": 1399, "itemName": "6-hours package - $500 OFF"},
+            {"amount": 1999, "itemName": "8-hours package - $500 OFF"},
+            {"amount": 2499, "itemName": "12-hours package - $500 OFF"},
+            {"amount": 3099, "itemName": "18-hours package - $500 OFF"},
+            {"amount": 3499, "itemName": "20-hours package - $500 OFF"},
+            {"amount": 3899, "itemName": "22-hours package - $500 OFF"},
+            {"amount": 4199, "itemName": "24-hours package - $500 OFF"}
+          ],
+          "plans": {
+            "3 months": [
+              {"amount": 266.67, "itemName": "2-hours package - 3 months", "count": 3, "id": "discount300-2-3-feb-2017"},
+              {"amount": 466.33, "itemName": "6-hours package - $500 off - 3 months", "count": 3, "id": "discount500-6-3-sep-2018"},
+              {"amount": 666.33, "itemName": "8-hours package - $500 off - 3 months", "count": 3, "id": "discount500-8-3-sep-2018"},
+              {"amount": 833, "itemName": "12-hours package - $500 off - 3 months", "count": 3, "id": "discount500-12-3-sep-2018"},
+              {"amount": 1033, "itemName": "18-hours package - $500 off - 3 months", "count": 3, "id": "discount500-18-3-sep-2018"},
+              {"amount": 1166.33, "itemName": "20-hours package - $500 off - 3 months", "count": 3, "id": "discount500-20-3-sep-2018"},
+              {"amount": 1299.67, "itemName": "22-hours package - $500 off - 3 months", "count": 3, "id": "discount500-22-3-sep-2018"},
+              {"amount": 1399.67, "itemName": "24-hours package - $500 off - 3 months", "count": 3, "id": "discount500-24-3-sep-2018"}
+            ],
+            "6 months": [
+              {"amount": 233.17, "itemName": "6-hours package - $500 off - 6 months", "count": 6, "id": "discount500-6-6-sep-2018"},
+              {"amount": 333.17, "itemName": "8-hours package - $500 off - 6 months", "count": 6, "id": "discount500-8-6-sep-2018"},
+              {"amount": 416.5, "itemName": "12-hours package - $500 off - 6 months", "count": 6, "id": "discount500-12-6-sep-2018"},
+              {"amount": 516.5, "itemName": "18-hours package - $500 off - 6 months", "count": 6, "id": "discount500-18-6-sep-2018"},
+              {"amount": 583.17, "itemName": "20-hours package - $500 off - 6 months", "count": 6, "id": "discount500-20-6-sep-2018"},
+              {"amount": 649.83, "itemName": "22-hours package - $500 off - 6 months", "count": 6, "id": "discount500-22-6-sep-2018"},
+              {"amount": 699.83, "itemName": "24-hours package - $500 off - 6 months", "count": 6, "id": "discount500-24-6-sep-2018"}
+            ],
+            "9 months": [
+              {"amount": 222.11, "itemName": "8-hours package - $500 off - 9 months", "count": 9, "id": "discount500-8-9-sep-2018"},
+              {"amount": 277.67, "itemName": "12-hours package - $500 off - 9 months", "count": 9, "id": "discount500-12-9-sep-2018"},
+              {"amount": 344.33, "itemName": "18-hours package - $500 off - 9 months", "count": 9, "id": "discount500-18-9-sep-2018"},
+              {"amount": 388.78, "itemName": "20-hours package - $500 off - 9 months", "count": 9, "id": "discount500-20-9-sep-2018"},
+              {"amount": 433.22, "itemName": "22-hours package - $500 off - 9 months", "count": 9, "id": "discount500-22-9-sep-2018"},
+              {"amount": 466.56, "itemName": "24-hours package - $500 off - 9 months", "count": 9, "id": "discount500-24-9-sep-2018"}
+            ],
+            "12 months": [
+              {"amount": 166.58, "itemName": "8-hours package - $500 off - 12 months", "count": 12, "id": "discount500-8-12-sep-2018"},
+              {"amount": 208.25, "itemName": "12-hours package - $500 off - 12 months", "count": 12, "id": "discount500-12-12-sep-2018"},
+              {"amount": 258.25, "itemName": "18-hours package - $500 off - 12 months", "count": 12, "id": "discount500-18-12-sep-2018"},
+              {"amount": 291.58, "itemName": "20-hours package - $500 off - 12 months", "count": 12, "id": "discount500-20-12-sep-2018"},
+              {"amount": 324.92, "itemName": "22-hours package - $500 off - 12 months", "count": 12, "id": "discount500-22-12-sep-2018"},
+              {"amount": 349.92, "itemName": "24-hours package - $500 off - 12 months", "count": 12, "id": "discount500-24-12-sep-2018"}
+            ]
+          }
         }
       }
       next(vm => {
